@@ -39,4 +39,4 @@ I design sono stati creati utilizzando le seguenti larghezze:
 ### Font
 
 - Family: [Aquatico](https://www.dafontfree.io/aquatico-font-free/)
-- Weights: 
+- Weights: Regular
