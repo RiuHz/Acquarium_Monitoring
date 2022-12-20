@@ -13,3 +13,16 @@
   </div>
 </body>
 ```
+
+# CSS
+```css
+.div-for-something {
+  property: value;
+  long-name-property: value;
+  
+  .another-div-for-something {
+    property: value;
+    long-name-property: value;
+  }
+}
+```
