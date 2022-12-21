@@ -16,6 +16,16 @@
 
 # CSS
 ```css
+.div {
+  property: value;
+  long-name-property: value;
+ }
+
+.p {
+property: value;
+long-name-property: value;
+}
+
 .div-for-something {
   property: value;
   long-name-property: value;
