@@ -45,3 +45,26 @@ from module import Class
 def my_fun(x: int, y: int) -> int:
   return x + y
 ```
+
+# PHP
+```php
+<?php
+
+class Test {
+
+    // Constructor
+    function __construct()
+    {
+        return($this);
+    }
+}
+
+
+// Function description
+function foo($x, $y)
+{
+    return($x + $y)
+}
+
+?>
+```
