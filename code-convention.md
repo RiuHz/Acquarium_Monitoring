@@ -70,3 +70,18 @@ function foo($x, $y)
 
 ?>
 ```
+
+# MySQL
+```mysql
+CREATE TABLE 1SidedTable {
+  FirstRow PRIMARY KEY PROPERTY;
+  SecondRow PROPERTY;
+  FOREIGN KEY;
+}
+
+CREATE TABLE NSidedTable {
+  FirstRow PRIMARY KEY PROPERTY;
+  SecondRow PRIMARY KEY PROPERTY;
+  FOREIGN KEY;
+}
+```
