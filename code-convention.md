@@ -50,6 +50,8 @@ def my_fun(x: int, y: int) -> int:
 ```php
 <?php
 
+require('class.php');
+
 class Test {
 
     // Constructor
@@ -63,7 +65,7 @@ class Test {
 // Function description
 function foo($x, $y)
 {
-    return($x + $y)
+    return($x + $y);
 }
 
 ?>
