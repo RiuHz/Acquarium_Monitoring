@@ -36,3 +36,12 @@ long-name-property: value;
   long-name-property: value;
 }
 ```
+
+# Python
+```python
+from module import Class
+
+# Function description
+def my_fun(x: int, y: int) -> int:
+  return x + y
+```
