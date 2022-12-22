@@ -8,9 +8,7 @@
 
     --bianco: #FDFCFA;
     --grigio: #ABB2BF;
-    --scuro-1: #282C34;
-    --scuro-2: #212528;
-    --scuro-3: #1C1F25;
+    --nero: #1C1F25;
 }
 
 @font-face {
@@ -26,28 +24,26 @@
 }
 
 body {
-    background-color: var(--scuro-3);
-    height: 200000px
+    background-color: var(--nero);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 p {
     font-size: 16px;
 }
 
+img {
+    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
+}
+
 ul {
     list-style-type: none;
     overflow: hidden;
-}
-
-.allineamento-orizzontale {
-    float: left;
-}
-
-.allineamento-orizzontale a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    padding: 0;
 }
 
 .titolo-principale {
@@ -59,7 +55,6 @@ ul {
 
 .div-per-stream {
     display: block;
-    background-color: black;
     margin-left: auto;
     margin-right: auto;
     width: 80vw;
@@ -73,9 +68,11 @@ ul {
     border-radius: 4%;
 }
 
-.lista-live {
+.live {
     position: relative;
     bottom: 2em;
+    width: 100%;
+    display: flex;
 }
 
 .pallino-live {
@@ -93,31 +90,56 @@ ul {
 }
 
 .icona-utenti-live {
-    width: 20px;
-    height: 20px;
-    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
-    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    position: relative;
+    bottom: 5px;
 }
 
-.icona-fullscreen-on {
-    width: 20px;
-    height: 20px;
-    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
-    float: right;
+.counter-live {
+    flex-grow: 1;
+}
+
+.icona-fullscreen {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    bottom: 5px;
+    margin-right: 20px;
+}
+
+.bottoni-social {
+    position: absolute;
+    left: 92.5vw;
+    bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 1vh;
 }
 
 .link-div {
-    background-color: black;
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    padding: 5px;
-    margin-top: 5px;
+    display: flex;
+    background-color: var(--nero);
+    border-color: var(--bianco);
+    border-style: solid;
+    width: 7.5vh;
+    height: 7.5vh;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
-    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
+    width: 2.5em;
+    height: 2.5em;
 }
 
+/* Telefoni */
+
+@media all and (max-width: 800px) {
+    body {
+        background-color: var(--blu);
+    }
+}
