@@ -1,1 +1,85 @@
+:root {
+    --colore-principale: #282c34;
+    --colore-scritte: #fcfdfa;
+    --colore-secondario: #abb2bf;
+}
 
+@font-face {
+    font-family: Aquatico;
+    src: url(./fonts/Aquatico-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--colore-principale);
+}
+
+.titolo-principale {
+    font-family: Aquatico;
+    text-align: center;
+    margin-top: 30px;
+    color: var(--colore-scritte);
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-in-basso-a-sinistra {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.div-per-stream {
+    background-color: black;
+    resize: both;
+    width: 80vw;
+    height: 80vh;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+}
+
+.pallino-live {
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    margin-left: 10px;
+}
+
+.scritta-live {
+    font-family: Aquatico;
+    color: var(--colore-scritte);
+    margin-left: 5px;
+}
+
+.icona-utenti-live {
+    width: 20px;
+    height: 20px;
+    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
+
+}
