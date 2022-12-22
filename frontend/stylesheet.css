@@ -27,45 +27,12 @@
 
 body {
     background-color: var(--scuro-3);
+    height: 200000px
 }
 
 p {
     font-size: 16px;
 }
-
-.titolo-principale {
-    display: block;
-    text-align: center;
-    margin: 3vh 0 3vh 0;
-    color: var(--bianco);
-}
-
-.div-per-stream {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    height: 80vh;
-    border-radius: 4%;
-}
-
-.stream {
-    width: 80vw;
-    height: 80vh;
-    border-radius: 4%;
-}
-
-.lista-live {
-    position: absolute;
-    top: 87vh;
-}
-
-
-
-
-
-
-
 
 ul {
     list-style-type: none;
@@ -83,12 +50,42 @@ li a {
     padding: 0;
 }
 
+.titolo-principale {
+    display: block;
+    text-align: center;
+    margin: 3vh 0 3vh 0;
+    color: var(--bianco);
+}
+
+.div-per-stream {
+    display: block;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 4%;
+}
+
+.stream {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 4%;
+}
+
+.lista-live {
+    position: relative;
+    bottom: 2em;
+}
+
 .pallino-live {
+    position: relative;
+    top: 2px;
     background-color: red;
-    height: 15px;
-    width: 15px;
-    border-radius: 100px;
-    margin-left: 10px;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    margin-left: 16px;
 }
 
 .scritta-live {
@@ -99,5 +96,5 @@ li a {
     width: 20px;
     height: 20px;
     filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
-    
+    margin-left: 5px;
 }
