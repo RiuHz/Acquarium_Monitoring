@@ -3,34 +3,30 @@
 ## Layout
 
 The designs were created to the following widths:
-I design sono stati creati utilizzando le seguenti larghezze:
 
 - Mobile: 
 - Desktop: 
 
 ## Colors
-## Colori
 
 ### Primary
-### Primari
 
-- Marine blue: hsl(213, 96%, 18%)
-- Purplish blue: hsl(243, 100%, 62%)
-- Pastel blue: hsl(228, 100%, 84%)
-- Light blue: hsl(206, 94%, 87%)
-- Strawberry red: hsl(354, 84%, 57%)
+- ![#56B6C2](https://placehold.co/20x20/56B6C2/56B6C2.png) `#56B6C2`
+- ![#61AFEF](https://placehold.co/20x20/61AFEF/61AFEF.png) `#61AFEF`
+- ![#E06C75](https://placehold.co/20x20/E06C75/E06C75.png) `#E06C75`
+- ![#D19A66](https://placehold.co/20x20/D19A66/D19A66.png) `#D19A66`
+- ![#E5C07B](https://placehold.co/20x20/E5C07B/E5C07B.png) `#E5C07B`
+- ![#98C379](https://placehold.co/20x20/98C379/98C379.png) `#98C379`
 
-### Neutral
-### Neutrali
+### Neutral 
 
-- Cool gray: hsl(231, 11%, 63%)
-- Light gray: hsl(229, 24%, 87%)
-- Magnolia: hsl(217, 100%, 97%)
-- Alabaster: hsl(231, 100%, 99%)
-- White: hsl(0, 0%, 100%)
+- ![#1C1F25](https://placehold.co/20x20/1C1F25/1C1F25.png) `#1C1F25`
+- ![#21252B](https://placehold.co/20x20/21252B/21252B.png) `#21252B`
+- ![#282C34](https://placehold.co/20x20/282C34/282C34.png) `#282C34`
+- ![#ABB2BF](https://placehold.co/20x20/ABB2BF/ABB2BF.png) `#ABB2BF`
+- ![#FDFCFA](https://placehold.co/20x20/FDFCFA/FDFCFA.png) `#FDFCFA`
 
 ## Typography
-## Tipografia
 
 ### Body Copy
 
