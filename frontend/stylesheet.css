@@ -39,11 +39,11 @@ ul {
     overflow: hidden;
 }
 
-li {
+.allineamento-orizzontale {
     float: left;
 }
 
-li a {
+.allineamento-orizzontale a {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -98,3 +98,26 @@ li a {
     filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
     margin-left: 5px;
 }
+
+.icona-fullscreen-on {
+    width: 20px;
+    height: 20px;
+    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
+    float: right;
+}
+
+.link-div {
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
+}
+
