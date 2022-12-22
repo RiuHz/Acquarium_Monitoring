@@ -2,18 +2,18 @@
 
 <!-- Permission font -->
 
-# Front-end Style Guide
+## Front-end Style Guide
 
-## Layout
+### Layout
 
 The designs were created to the following widths:
 
 - Mobile: 
 - Desktop: 
 
-## Colors
+### Colors
 
-### Primary
+#### Primary
 
 - ![#56B6C2](https://placehold.co/20x20/56B6C2/56B6C2.png) `#56B6C2`
 - ![#61AFEF](https://placehold.co/20x20/61AFEF/61AFEF.png) `#61AFEF`
@@ -22,7 +22,7 @@ The designs were created to the following widths:
 - ![#E5C07B](https://placehold.co/20x20/E5C07B/E5C07B.png) `#E5C07B`
 - ![#98C379](https://placehold.co/20x20/98C379/98C379.png) `#98C379`
 
-### Neutral 
+#### Neutral 
 
 - ![#1C1F25](https://placehold.co/20x20/1C1F25/1C1F25.png) `#1C1F25`
 - ![#21252B](https://placehold.co/20x20/21252B/21252B.png) `#21252B`
@@ -30,13 +30,13 @@ The designs were created to the following widths:
 - ![#ABB2BF](https://placehold.co/20x20/ABB2BF/ABB2BF.png) `#ABB2BF`
 - ![#FDFCFA](https://placehold.co/20x20/FDFCFA/FDFCFA.png) `#FDFCFA`
 
-## Typography
+### Typography
 
-### Body Copy
+#### Body Copy
 
 - Font size (paragraph): 16px
 
-### Font
+#### Font
 
 - Family: [Aquatico](https://www.dafontfree.io/aquatico-font-free/)
 - Weights: Regular
