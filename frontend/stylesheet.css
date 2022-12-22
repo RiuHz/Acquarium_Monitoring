@@ -1,7 +1,16 @@
 :root {
-    --colore-principale: #282c34;
-    --colore-scritte: #fcfdfa;
-    --colore-secondario: #abb2bf;
+    --verda-acqua: #56B6C2;
+    --blu: #61AFEF;
+    --rosso: #E06C75;
+    --arancione: #D19A66;
+    --giallo: #E5C07B;
+    --verde: #98C379;
+
+    --bianco: #FDFCFA;
+    --grigio: #ABB2BF;
+    --scuro-1: #282C34;
+    --scuro-2: #212528;
+    --scuro-3: #1C1F25;
 }
 
 @font-face {
@@ -12,40 +21,51 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Aquatico;
+    color: var(--bianco);
 }
 
 body {
-    background-color: var(--colore-principale);
+    background-color: var(--scuro-3);
+}
+
+p {
+    font-size: 16px;
 }
 
 .titolo-principale {
-    font-family: Aquatico;
+    display: block;
     text-align: center;
-    margin-top: 30px;
-    color: var(--colore-scritte);
-}
-
-.wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
-
-.wrapper-in-basso-a-sinistra {
-    position: absolute;
-    bottom: 0px;
-    margin-bottom: 10px;
+    margin: 3vh 0 3vh 0;
+    color: var(--bianco);
 }
 
 .div-per-stream {
-    background-color: black;
-    resize: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 80vw;
     height: 80vh;
+    border-radius: 4%;
 }
+
+.stream {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 4%;
+}
+
+.lista-live {
+    position: absolute;
+    top: 87vh;
+}
+
+
+
+
+
+
+
 
 ul {
     list-style-type: none;
@@ -72,8 +92,6 @@ li a {
 }
 
 .scritta-live {
-    font-family: Aquatico;
-    color: var(--colore-scritte);
     margin-left: 5px;
 }
 
@@ -81,5 +99,5 @@ li a {
     width: 20px;
     height: 20px;
     filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
-
+    
 }
