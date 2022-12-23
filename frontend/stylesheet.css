@@ -59,13 +59,13 @@ ul {
     margin-right: auto;
     width: 80vw;
     height: 40vw;
-    border-radius: 4%;
+    border-radius: 1%;
 }
 
 .stream {
-    width: 80vw;
-    height: 40vw;
-    border-radius: 4%;
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
 }
 
 .div-live {
@@ -107,12 +107,13 @@ ul {
     position: relative;
     bottom: 5px;
     margin-right: 50px;
+    cursor: pointer;
 }
 
 .bottoni-social {
-    position: absolute;
-    left: 95vw;
-    bottom: 5vh;
+    position: relative;
+    left: 92.5vw;
+    bottom: 20vh;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -124,19 +125,19 @@ ul {
     background-color: var(--nero);
     border-color: var(--bianco);
     border-style: solid;
-    width: 3em;
-    height: 3em;
+    width: 3rem;
+    height: 3rem;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
 }
 
 .icon {
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
 }
 
-/* Telefoni */
+/* Mobile */
 
 @media all and (max-width: 800px) {
     body {
