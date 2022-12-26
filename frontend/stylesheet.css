@@ -16,40 +16,54 @@
     src: url(./fonts/Aquatico-Regular.otf);
 }
 
+/* Scrollbar */
+
 ::-webkit-scrollbar {
     width: 0.5rem;
-  }
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: none;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background: var(--grigio);
     border-radius: 100px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:hover {
     background: var(--bianco);
-  }
+}
+
+/* HTML Tags */
 
 * {
     box-sizing: border-box;
-    color: var(--bianco )
+    color: var(--bianco );
+    font-family: Aquatico;
 }
 
 body {
-    font-family: Aquatico;
     background-color: var(--nero);
 }
 
 p {
-    font-size: 16px;;
+    font-size: 16px;
 }
 
 img {
     filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
 }
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* HTML Class */
+
+/* Prima Pagina */
 
 .titolo-principale {
     text-align: center;
@@ -90,6 +104,7 @@ img {
     width: 16px;
     border-radius: 100%;
     margin-left: 1rem;
+    animation: rec 2s infinite ease-in-out;
 }
 
 .scritta-live {
@@ -114,12 +129,12 @@ img {
 
 .bottoni-social {
     grid-area: 1 / 3 / 3 / 4;
+    margin: 0 0.5vw 0 0.5vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: flex-end;
+    align-items: flex-end;
     gap: 0.5rem;
-    margin-right: 1vw;
 }
 
 .link-div {
@@ -139,10 +154,42 @@ img {
     height: 1.5rem;
 }
 
+.label-social {
+    font-size: 10px;
+    text-align: end;
+    position: absolute;
+    right: 120%;
+    width: auto;
+    white-space: nowrap;
+    display: none;
+}
+
+.link-div:hover .label-social {
+    display: inline;
+    opacity: 1;
+    animation: social-fade-in 0.5s ease-in;
+}
+
+/* Dati in Tempo Reale */
+
 /* Mobile */
 
 @media all and (max-width: 800px) {
     body {
         background-color: var(--blu);
     }
+}
+
+/* Animation */
+
+@keyframes rec {
+    from {opacity: 1;}
+    15% {opacity: 0;}
+    30% {opacity: 1;}
+    to {opacity: 1;}
+}
+
+@keyframes social-fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
