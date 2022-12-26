@@ -41,14 +41,6 @@
 body {
     font-family: Aquatico;
     background-color: var(--nero);
-    display: grid;
-    grid-template: 
-        'header header header'
-        'left-spacer stream right-spacer'
-        'dati-tempo-reale dati-tempo-reale dati-tempo-reale'
-        'barra-1 spazio barra-2'
-        'barra-3 spazio barra-4'
-        'footer footer footer';
 }
 
 p {
@@ -60,14 +52,22 @@ img {
 }
 
 .titolo-principale {
-    grid-area: header;
     text-align: center;
-    margin-top: 51px;
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+.pagina-principale {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 20fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .div-per-stream {
-    grid-area: stream;
+    grid-column: 2 / 3;
     aspect-ratio: 16 / 9;
+    position: relative;
 }
 
 .stream {
@@ -76,13 +76,12 @@ img {
 }
 
 .div-live {
-    grid-area: stream;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    position: relative;
-    top: 100%;
+    position: absolute;
+    bottom: 0px;
 }
 
 .pallino-live {
@@ -103,17 +102,27 @@ img {
     margin-left: 0.5rem;
 }
 
+.counter-live {
+    flex-grow: 1;
+}
+
+.icona-fullscreen {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
 .bottoni-social {
-    grid-area: right-spacer;
+    grid-area: 1 / 3 / 3 / 4;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     gap: 0.5rem;
+    margin-right: 1vw;
 }
 
 .link-div {
-    grid-area: social;
     background-color: var(--nero);
     border-color: var(--bianco);
     border-style: solid;
