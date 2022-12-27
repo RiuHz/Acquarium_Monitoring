@@ -41,8 +41,13 @@ long-name-property: value;
 ```python
 from module import Class
 
-# Function description
 def my_fun(x: int, y: int) -> int:
+  """"
+  Short Description.
+  
+  :param x, y: numbers to add
+  :return: the total
+  """
   return x + y
 ```
 
