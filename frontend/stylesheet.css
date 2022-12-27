@@ -56,9 +56,9 @@ img {
 }
 
 a {
+    position: relative;
     text-decoration: none;
     cursor: pointer;
-    position: relative;
 }
 
 /* HTML Class */
@@ -66,22 +66,20 @@ a {
 /* Prima Pagina */
 
 .titolo-principale {
-    text-align: center;
     margin: 1.5rem 0 1.5rem 0;
+    text-align: center;
 }
 
 .pagina-principale {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 20fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
 }
 
 .div-per-stream {
     grid-column: 2 / 3;
-    aspect-ratio: 16 / 9;
     position: relative;
+    aspect-ratio: 16 / 9;
 }
 
 .stream {
@@ -90,20 +88,20 @@ a {
 }
 
 .div-live {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
     bottom: 0px;
+    width: 100%;
 }
 
 .pallino-live {
+    margin-left: 1rem;
+    border-radius: 100%;
     background-color: red;
     height: 16px;
     width: 16px;
-    border-radius: 100%;
-    margin-left: 1rem;
     animation: rec 2s infinite ease-in-out;
 }
 
@@ -112,9 +110,9 @@ a {
 }
 
 .icona-utenti-live {
+    margin-left: 0.5rem;
     width: 30px;
     height: 30px;
-    margin-left: 0.5rem;
 }
 
 .counter-live {
@@ -122,9 +120,9 @@ a {
 }
 
 .icona-fullscreen {
+    margin-right: 0.5rem;
     width: 30px;
     height: 30px;
-    margin-right: 0.5rem;
 }
 
 .bottoni-social {
@@ -138,15 +136,15 @@ a {
 }
 
 .link-div {
-    background-color: var(--nero);
-    border-color: var(--bianco);
-    border-style: solid;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--nero);
+    border-color: var(--bianco);
+    border-style: solid;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .icon {
@@ -155,13 +153,13 @@ a {
 }
 
 .label-social {
-    font-size: 10px;
-    text-align: end;
+    display: none;
     position: absolute;
     right: 120%;
-    width: auto;
+    text-align: end;
     white-space: nowrap;
-    display: none;
+    font-size: 10px;
+    width: auto;
 }
 
 .link-div:hover .label-social {
