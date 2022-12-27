@@ -45,7 +45,7 @@ def my_fun(x: int, y: int) -> int:
   """"
   Short Description.
   
-  :params x, y: numbers to add
+  :param x, y: numbers to add
   :return: the total
   """
   return x + y
