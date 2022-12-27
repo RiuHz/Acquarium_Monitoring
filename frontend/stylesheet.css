@@ -44,6 +44,7 @@
 }
 
 body {
+    margin: 0;
     background-color: var(--nero);
 }
 
@@ -208,6 +209,30 @@ a {
     grid-area: 1 / 3 / 3 / 4;
     margin: 15px 0 0 10px;
     font-size: 45px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: var(--blu);
+}
+
+.info-scuola, .web-server, .partecipanti {
+    color: var(--nero);
+    margin: 2rem 0;
+}
+
+.web-server {
+    text-align: center;
+}
+
+.partecipanti {
+    text-align: end;
 }
 
 /* Mobile */
