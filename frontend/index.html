@@ -13,7 +13,7 @@
 
   <!-- INIZIO PRIMA PAGINA -->
 
-  <h1 class="titolo-principale">Acquario Ferraris</h1>
+  <h1 class="titolo">Acquario Ferraris</h1>
 
   <div class="pagina-principale">
     <div class="div-per-stream">
@@ -57,52 +57,62 @@
   <!-- FINE PRIMA PAGINA -->
 
   <!-- INIZIO PAGINA DATI IN TEMPO REALE -->
+
+  <div class="card">
+
+    <h2 class="titolo dati-in-tempo-reale">DATI IN TEMPO REALE</h2>
   
-  <h2 class="titolo-principale">DATI IN TEMPO REALE</h2>
+    <div class="div-dati-in-tempo-reale">
+      
+      <div class="div-dato temperatura">
+        <img src="./images/pagina_dati_live/icona_temperatura.svg" alt="temperatura-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-temperatura">Temperatura</label>
+        <meter class="barra-dato" id="barra-temperatura" min="0" max="100" value="50"></meter>
+        <p class="dato-live">50°C</p>
+      </div>
   
-  <div class="div-dati-in-tempo-reale">
-    
-    <div class="div-dato">
-      <img src="./images/pagina_dati_live/icona_temperatura.svg" alt="temperatura-icon" class="icona-dati">
-      <label class="label-dato-live" for="barra-temperatura">Temperatura</label>
-      <meter class="barra-dato" id="barra-temperatura" min="0" max="100" value="50"></meter>
-      <p class="dato-live">50°C</p>
+      <div class="div-dato ph">
+        <img src="./images/pagina_dati_live/icona_ph.svg" alt="ph-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-ph">PH</label>
+        <meter class="barra-dato" id="barra-ph" min="0" max="10" optimum="7" low="4" high="10" value="7"></meter>
+        <p class="dato-live">6</p>
+      </div>
+  
+      <div class="div-dato mangime">
+        <img src="./images/pagina_dati_live/icona_mangine.svg" alt="mangime-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-mangime">Mangime</label>
+        <meter class="barra-dato" id="barra-mangime" min="-1" max="0.001" optimum="0.5" low="0.25" high="1" value="0"></meter>
+        <p class="dato-live">No</p>
+      </div>
+  
+      <div class="div-dato livello-acqua">
+        <img src="./images/pagina_dati_live/icona_livello_acqua.svg"alt="livello-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-livello-acqua">Livello dell'acqua</label>
+        <meter class="barra-dato" id="barra-livello-acqua" min="0" max="2" optimum="1" low="0.5" high="1.5" value="2"></meter>
+        <p class="dato-live">Alto</p>
+      </div>
+   
     </div>
 
-    <div class="div-dato">
-      <img src="./images/pagina_dati_live/icona_ph.svg" alt="ph-icon" class="icona-dati">
-      <label class="label-dato-live" for="barra-ph">PH</label>
-      <meter class="barra-dato" id="barra-ph" min="0" max="10" optimum="7" low="4" high="10" value="7"></meter>
-      <p class="dato-live">6</p>
-    </div>
-
-    <div class="div-dato">
-      <img src="./images/pagina_dati_live/icona_mangine.svg" alt="mangime-icon" class="icona-dati">
-      <label class="label-dato-live" for="barra-mangime">Mangime</label>
-      <meter class="barra-dato" id="barra-mangime" min="-0.1" max="1" optimum="1" low="0.5" high="0.75" value="0"></meter>
-      <p class="dato-live">No</p>
-    </div>
-
-    <div class="div-dato">
-      <img src="./images/pagina_dati_live/icona_livello_acqua.svg"alt="livello-icon" class="icona-dati">
-      <label class="label-dato-live" for="barra-acqua">Livello dell'acqua</label>
-      <meter class="barra-dato" id="barra-acqua" min="-0.5" max="2" optimum="1" low="0.5" high="1.5" value="2"></meter>
-      <p class="dato-live">Alto</p>
-    </div>
- 
   </div>
   
   <!-- FINE PAGINA DATI IN TEMPO REALE -->
-  
+
+  <!-- INIZIO PAGINA QUERY-->
+
+  <h2 class="titolo">Query</h2>
+
+  <!-- FINE PAGINA QUERY-->
+
   <!-- INIZIO FOOTER -->
 
   <footer class="footer">
     
     <p class="info-scuola">
-      Istituto Tecnico Industriale Galielo Ferraris<br>
+      Istituto Tecnico Industriale Galileo Ferraris<br>
       Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
-      PEO: <a href="mailto:natf17000q@istruzione.it">natf17000q@istruzione.it</a><br>
-      PEC: <a href="mailto:natf17000q@pec.istruzione.it">natf17000q@pec.istruzione.it</a><br>
+      PEC: <a class="email" href="mailto:natf17000q@pec.istruzione.it">natf17000q@pec.istruzione.it</a><br>
+      PEO: <a class="email" href="mailto:natf17000q@istruzione.it">natf17000q@istruzione.it</a><br>
       Cod. Mecc. natf17000q
     </p>
       
@@ -114,7 +124,7 @@
     </p>
       
     <p class="partecipanti">
-      Hanno partecipato al progetto<br>
+      Hanno lavorato al progetto<br>
       Corsetti Gennaro<br>
       Di Tota Gaetano<br>
       Guidelli Micheal<br>
