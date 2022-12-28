@@ -13,7 +13,7 @@
 
   <!-- INIZIO PRIMA PAGINA -->
 
-  <h1 class="titolo-principale">Acquario Ferraris</h1>
+  <h1 class="titolo">Acquario Ferraris</h1>
 
   <div class="pagina-principale">
     <div class="div-per-stream">
@@ -25,7 +25,7 @@
         <img src="./images/prima_pagina/icona_fullscreen_on.svg" alt="Fullscreen" class="icona-fullscreen">
       </div>
     
-    <iframe class="stream" src="https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="stream" src="https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="bottoni-social">
@@ -33,21 +33,21 @@
 
         <div class="link-div">
           <p class="label-social">Facebook Scuola</p>
-          <img src="./images/prima_pagina/facebook_icon.svg" alt="facebook-icon" class="icon">
+          <img src="./images/prima_pagina/facebook_icon.svg" alt="facebook-icon" class="icona-social">
         </div>
       </a>
 
       <a href="https://www.instagram.com/galileo_ferraris_/" target="_blank">
         <div class="link-div">
           <p class="label-social">Instagram Scuola</p>
-          <img src="./images/prima_pagina/instagram_icon.svg" alt="instagram-icon" class="icon">
+          <img src="./images/prima_pagina/instagram_icon.svg" alt="instagram-icon" class="icona-social">
         </div>
       </a>
 
       <a href="https://www.itiferraris.edu.it/" target="_blank">
         <div class="link-div">
           <p class="label-social">Sito Scuola</p>
-          <img src="./images/prima_pagina/icona_ferraris.svg" alt="sito-scuola" class="icon">
+          <img src="./images/prima_pagina/icona_ferraris.svg" alt="sito-scuola" class="icona-social">
         </div>
       </a>
     </div>
@@ -57,65 +57,79 @@
   <!-- FINE PRIMA PAGINA -->
 
   <!-- INIZIO PAGINA DATI IN TEMPO REALE -->
+
+  <div class="card">
+
+    <h2 class="titolo dati-in-tempo-reale">DATI IN TEMPO REALE</h2>
   
-  <h2 class="titolo-principale">DATI IN TEMPO REALE</h2>
+    <div class="div-dati-in-tempo-reale">
+      
+      <div class="div-dato temperatura">
+        <img src="./images/pagina_dati_live/icona_temperatura.svg" alt="temperatura-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-temperatura">Temperatura</label>
+        <meter class="barra-dato" id="barra-temperatura" min="0" max="100" value="50"></meter>
+        <p class="dato-live">50°C</p>
+      </div>
   
-  <div class="div-dati-in-tempo-reale">
-    
-    <div class="prima-barra">
-      <img src="./images/pagina_dati_live/icona_temperatura.svg" alt="temperatura-icon" class="icon">
-      <label class="label-dato-live" for="barra-temperatura">Temperatura</label>
-      <meter class="barra-dato" id="barra-temperatura" min="0" max="100" value="50"></meter>
-      <p class="dato-live">1</p>
+      <div class="div-dato ph">
+        <img src="./images/pagina_dati_live/icona_ph.svg" alt="ph-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-ph">PH</label>
+        <meter class="barra-dato" id="barra-ph" min="0" max="10" optimum="7" low="4" high="10" value="7"></meter>
+        <p class="dato-live">6</p>
+      </div>
+  
+      <div class="div-dato mangime">
+        <img src="./images/pagina_dati_live/icona_mangine.svg" alt="mangime-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-mangime">Mangime</label>
+        <meter class="barra-dato" id="barra-mangime" min="-1" max="0.001" optimum="0.5" low="0.25" high="1" value="0"></meter>
+        <p class="dato-live">No</p>
+      </div>
+  
+      <div class="div-dato livello-acqua">
+        <img src="./images/pagina_dati_live/icona_livello_acqua.svg"alt="livello-icon" class="icona-dati">
+        <label class="label-dato-live" for="barra-livello-acqua">Livello dell'acqua</label>
+        <meter class="barra-dato" id="barra-livello-acqua" min="0" max="2" optimum="1" low="0.5" high="1.5" value="2"></meter>
+        <p class="dato-live">Alto</p>
+      </div>
+   
     </div>
 
-    <div class="seconda-barra">
-      <img src="./images/pagina_dati_live/icona_ph.svg" alt="ph-icon" class="icon">
-      <label class="label-dato-live" for="barra-temperatura">PH</label>
-      <meter class="barra-dato" id="barra-temperatura" min="0" max="100" value="50"></meter>
-      <p class="dati-live">2</p>
-    </div>
-
-    <div class="terza-barra">
-      <img src="./images/pagina_dati_live/icona_mangine.svg" alt="mangime-icon" class="icon">
-      <label class="label-dato-live" for="barra-temperatura">Mangime</label>
-      <meter class="barra-dato" id="barra-temperatura" min="0" max="1" value="50"></meter>
-      <p class="dato-live">3</p>
-    </div>
-
-    <div class="quarta-barra">
-      <img src="./images/pagina_dati_live/icona_livello_acqua.svg"alt="livello-icon" class="icon">
-      <label class="label-dato-live" for="barra-temperatura">Livello dell'acqua</label>
-      <meter class="barra-dato" id="barra-temperatura" min="0" optimum="1" max="2" value="50"></meter>
-      <p class="dato-live">4</p>
-    </div>
- 
   </div>
   
   <!-- FINE PAGINA DATI IN TEMPO REALE -->
-  
 
+  <!-- INIZIO PAGINA QUERY-->
+
+  <h2 class="titolo">Query</h2>
+
+  <!-- FINE PAGINA QUERY-->
 
   <!-- INIZIO FOOTER -->
+
   <footer class="footer">
     
-    <p class="info-scuola">Istituto Tecnico Industriale Galielo Ferraris
-      <br>Via A.Labriola, Lotto 2G - Scampia - Napoli
-      <br>PEO:natf17000q@istruzione.it
-      <br>PEC: natf:natf17000q@pec.istruzione.it</p>
+    <p class="info-scuola">
+      Istituto Tecnico Industriale Galileo Ferraris<br>
+      Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
+      PEC: <a class="email" href="mailto:natf17000q@pec.istruzione.it">natf17000q@pec.istruzione.it</a><br>
+      PEO: <a class="email" href="mailto:natf17000q@istruzione.it">natf17000q@istruzione.it</a><br>
+      Cod. Mecc. natf17000q
+    </p>
       
-      <p style="text-align:center"> Web Server Realizzato da
-        <br>5bse 2022
-        <br>Logistica sensori realizzata
-        <br> 5ase / 5aut 2022
-      </p>
+    <p class="web-server">
+      Web Server Realizzato da<br>
+      5BSE 2022<br>
+      Logistica sensori realizzata<br>
+      5ASE / 5AUT 2022
+    </p>
       
-      <p style="text-align:right">Hanno partecipato al progetto
-        <br>Gaetano di tota 
-        <br> Amedeo Lista
-        <br> Michael Guidelli
-        <br> Gennaro Corsetti
-      </p>
+    <p class="partecipanti">
+      Hanno lavorato al progetto<br>
+      Corsetti Gennaro<br>
+      Di Tota Gaetano<br>
+      Guidelli Micheal<br>
+      Lista Amedeo
+    </p>
   
     </footer>
    
