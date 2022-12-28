@@ -37,18 +37,32 @@ long-name-property: value;
 }
 ```
 
-# Python
-```python
-from module import Class
+# Javascript
+```Javascript
+// Function Short Description
 
-def my_fun(x: int, y: int) -> int:
-  """"
-  Short Description.
+function myFunc(x, y) {
+  let z = x + y;
   
-  :param x, y: numbers to add
-  :return: the total
-  """
-  return x + y
+  return z;
+};
+
+for (let i = 0; i < 5; i++) {
+  x += i;
+};
+
+if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+};
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
 ```
 
 # PHP
@@ -74,6 +88,20 @@ function foo($x, $y)
 }
 
 ?>
+```
+
+# Python
+```python
+from module import Class
+
+def my_fun(x: int, y: int) -> int:
+  """"
+  Short Description.
+  
+  :param x, y: numbers to add
+  :return: the total
+  """
+  return x + y
 ```
 
 # MySQL
