@@ -65,3 +65,14 @@ function cambioIconaFullScreen() {
 }
 
 addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
+
+function cambioIconaPausePlay() {
+    let icons = document.getElementById("icona_pause");
+
+    if (icons.src.match("./images/prima_pagina/pause_icon.svg")) {
+        icons.src = "./images/prima_pagina/play_icon.svg";
+    } else {
+        icons.src = "./images/prima_pagina/pause_icon.svg";
+    };
+} ;
+    
