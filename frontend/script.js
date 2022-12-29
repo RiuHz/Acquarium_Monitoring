@@ -1,3 +1,5 @@
+// Fake JSON Creator
+
 function FakeJSON() {
     let dict = {
         temperatura: Math.floor(Math.random() * 101),
@@ -8,6 +10,8 @@ function FakeJSON() {
 
     return JSON.stringify(dict)
 };
+
+// Real Time Data Updater
 
 function RealTimeData() {
 
@@ -33,20 +37,9 @@ function RealTimeData() {
     }, 1000)
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    RealTimeData();
-});
+document.addEventListener('DOMContentLoaded', RealTimeData());
 
-function cambioIconaFullScreen() {
-    let icona = document.getElementById("icona-fullscreen");
-
-    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
-            icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
-        }
-    else {
-        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
-    }
-}
+// Fullscreen Stream
 
 function fullScreenOnOff() {
 
@@ -59,4 +52,16 @@ function fullScreenOnOff() {
     }
 }
 
-addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
+// Fullscreen Icon Change
+
+function cambioIconaFullScreen() {
+    let icona = document.getElementById("icona-fullscreen");
+
+    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
+        icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
+    } else {
+        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
+    }
+}
+
+addEventListener("fullscreenchange", cambioIconaFullScreen());
