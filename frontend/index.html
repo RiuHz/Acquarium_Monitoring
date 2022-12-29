@@ -16,13 +16,13 @@
   <h1 class='titolo'>Acquario Ferraris</h1>
 
   <div class='pagina-principale'>
-    <div class='div-per-stream'>
+    <div class='div-per-stream' id="stream" ondblclick="fullScreenOnOff()">
       <div class='div-live'>
         <div class='pallino-live'></div>
         <p class='scritta-live'>LIVE</p>
         <img src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live' class='icona-utenti-live'>
         <p class='counter-live'>10</p>
-        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-fullscreen'>
+        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-fullscreen' id="icona-fullscreen" onclick="fullScreenOnOff()">
       </div>
     
     <iframe class='stream' src='https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>

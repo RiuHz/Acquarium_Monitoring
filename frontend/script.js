@@ -11,7 +11,7 @@ function FakeJSON() {
 
 function RealTimeData() {
 
-    let interval = setInterval( function() {
+    setInterval( function() {
         let data = JSON.parse(FakeJSON());
 
         // Temperatura
@@ -36,3 +36,27 @@ function RealTimeData() {
 document.addEventListener('DOMContentLoaded', function() {
     RealTimeData();
 });
+
+function cambioIconaFullScreen() {
+    let icona = document.getElementById("icona-fullscreen");
+
+    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
+            icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
+        }
+    else {
+        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
+    }
+}
+
+function fullScreenOnOff() {
+
+    let divStream = document.getElementById("stream");
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        divStream.requestFullscreen();
+    }
+}
+
+addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
