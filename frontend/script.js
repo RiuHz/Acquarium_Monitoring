@@ -64,4 +64,4 @@ function cambioIconaFullScreen() {
     }
 }
 
-addEventListener("fullscreenchange", cambioIconaFullScreen());
+addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
