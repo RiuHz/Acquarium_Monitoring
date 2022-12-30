@@ -54,10 +54,23 @@ function cambioIconaFullScreen() {
 function defineEvents() {
     let divStream = document.getElementById('div-per-stream');
     let iconaPausa = document.getElementById('icona-pausa');
+    let iconaFullscreen = document.getElementById('icona-fullscreen');
 
     // On Stream double click activate on / off fullscreen
 
     divStream.addEventListener('dblclick', (event) => {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            divStream.requestFullscreen();
+        }
+
+        event.stopPropagation();
+    });
+
+    // On IconaFullscreen click activate on / off fullscreen
+
+    iconaFullscreen.addEventListener('click', (event) => {
         if (document.fullscreenElement) {
             document.exitFullscreen();
         } else {
