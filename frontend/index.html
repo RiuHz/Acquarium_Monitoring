@@ -16,14 +16,14 @@
   <h1 class='titolo'>Acquario Ferraris</h1>
 
   <div class='pagina-principale'>
-    <div class='div-per-stream' id="stream" ondblclick="fullScreenOnOff()">
+    <div class='div-per-stream' id='div-per-stream' ondblclick='fullScreenOnOff()'>
       <div class='div-live'>
-        <img src="./images/prima_pagina/pause_icon.svg" alt="icona pausa" class='icona-utenti-live' id='icona-pause' onclick="cambioIconaPausePlay()">
+        <img src='./images/prima_pagina/pause_icon.svg' alt='Pausa / Riprendi' class='icona-live' id='icona-pause' onclick='cambioIconaPausePlay()'>
         <div class='pallino-live'></div>
         <p class='scritta-live'>LIVE</p>
-        <img src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live' class='icona-utenti-live'>
+        <img src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live' class='icona-live'>
         <p class='counter-live'>10</p>
-        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-fullscreen' id="icona-fullscreen" onclick="fullScreenOnOff()">
+        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-live icona-fullscreen' id='icona-fullscreen' onclick='fullScreenOnOff()'>
       </div>
     
     <iframe class='stream' src='https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
@@ -33,22 +33,22 @@
       <a href='https://www.facebook.com/GalileoFerrarisNaples/' target='_blank'>
 
         <div class='link-div'>
-          <p class='label-social'>Facebook Scuola</p>
-          <img src='./images/prima_pagina/facebook_icon.svg' alt='facebook-icon' class='icona-social'>
+          <p class='label-social'>Facebook Ferraris</p>
+          <img src='./images/prima_pagina/facebook_icon.svg' alt='Facebook' class='icona-social'>
         </div>
       </a>
 
       <a href='https://www.instagram.com/galileo_ferraris_/' target='_blank'>
         <div class='link-div'>
-          <p class='label-social'>Instagram Scuola</p>
-          <img src='./images/prima_pagina/instagram_icon.svg' alt='instagram-icon' class='icona-social'>
+          <p class='label-social'>Instagram Ferraris</p>
+          <img src='./images/prima_pagina/instagram_icon.svg' alt='Instagram' class='icona-social'>
         </div>
       </a>
 
       <a href='https://www.itiferraris.edu.it/' target='_blank'>
         <div class='link-div'>
-          <p class='label-social'>Sito Scuola</p>
-          <img src='./images/prima_pagina/icona_ferraris.svg' alt='sito-scuola' class='icona-social'>
+          <p class='label-social'>Homepage Ferraris</p>
+          <img src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris' class='icona-social'>
         </div>
       </a>
     </div>
@@ -61,33 +61,33 @@
 
   <div class='card'>
 
-    <h2 class='titolo dati-in-tempo-reale'>DATI IN TEMPO REALE</h2>
+    <h2 class='titolo'>DATI IN TEMPO REALE</h2>
   
     <div class='div-dati-in-tempo-reale'>
       
-      <div class='div-dato temperatura'>
-        <img src='./images/pagina_dati_live/icona_temperatura.svg' alt='temperatura-icon' class='icona-dati'>
+      <div class='div-dato'>
+        <img src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura' class='icona-dati'>
         <label class='label-dato-live' for='barra-temperatura'>Temperatura</label>
         <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value='24'></meter>
         <p class='dato-live' id='p-temperatura'>24°C</p>
       </div>
   
-      <div class='div-dato ph'>
-        <img src='./images/pagina_dati_live/icona_ph.svg' alt='ph-icon' class='icona-dati'>
+      <div class='div-dato'>
+        <img src='./images/pagina_dati_live/icona_ph.svg' alt='PH' class='icona-dati'>
         <label class='label-dato-live' for='barra-ph'>PH</label>
         <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value='7'></meter>
         <p class='dato-live' id='p-ph'>7</p>
       </div>
   
-      <div class='div-dato mangime'>
-        <img src='./images/pagina_dati_live/icona_mangine.svg' alt='mangime-icon' class='icona-dati'>
+      <div class='div-dato'>
+        <img src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime' class='icona-dati'>
         <label class='label-dato-live' for='barra-mangime'>Mangime</label>
         <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value='0'></meter>
         <p class='dato-live' id='p-mangime'>No</p>
       </div>
   
-      <div class='div-dato livello-acqua'>
-        <img src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='livello-icon' class='icona-dati'>
+      <div class='div-dato'>
+        <img src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua' class='icona-dati'>
         <label class='label-dato-live' for='barra-livello-acqua'>Livello dell'acqua</label>
         <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value='2'></meter>
         <p class='dato-live' id='p-livello-acqua'>Alto</p>
@@ -101,15 +101,13 @@
 
   <!-- INIZIO PAGINA QUERY-->
 
-  <h2 class='titolo'>Query</h2>
-
   <!-- FINE PAGINA QUERY-->
 
   <!-- INIZIO FOOTER -->
 
   <footer class='footer'>
     
-    <p class='info-scuola'>
+    <p class='info-footer'>
       Istituto Tecnico Industriale Galileo Ferraris<br>
       Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
       PEC: <a class='email' href='mailto:natf17000q@pec.istruzione.it'>natf17000q@pec.istruzione.it</a><br>
@@ -117,14 +115,14 @@
       Cod. Mecc. natf17000q
     </p>
       
-    <p class='web-server'>
+    <p class='info-footer'>
       Web Server Realizzato da<br>
       5BSE 2022<br>
       Logistica sensori Realizzata da<br>
       5ASE / 5AUT 2022
     </p>
       
-    <p class='partecipanti'>
+    <p class='info-footer'>
       Hanno lavorato al progetto<br>
       Corsetti Gennaro<br>
       Di Tota Gaetano<br>
@@ -132,7 +130,7 @@
       Lista Amedeo
     </p>
   
-    </footer>
+  </footer>
    
 <!-- FINE FOOTER -->
 
