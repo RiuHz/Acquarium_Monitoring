@@ -123,8 +123,8 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 .div-per-stream {
-    grid-column: 2 / 3;
     position: relative;
+    grid-area: 1 / 2 / 2 / 3;
     aspect-ratio: 16 / 9;
 }
 
@@ -133,12 +133,12 @@ meter::-webkit-meter-even-less-good-value {
     height: 100%;
 }
 
-.div-live {
+.div-overlay {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
 }
 
@@ -161,6 +161,7 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 .counter-live {
+    margin-left: -0.5rem;
     flex-grow: 1;
 }
 

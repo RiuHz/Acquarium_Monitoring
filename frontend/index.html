@@ -16,17 +16,17 @@
   <h1 class='titolo'>Acquario Ferraris</h1>
 
   <div class='pagina-principale'>
-    <div class='div-per-stream' id='div-per-stream' ondblclick='fullScreenOnOff()'>
-      <div class='div-live'>
-        <img src='./images/prima_pagina/pause_icon.svg' alt='Pausa / Riprendi' class='icona-live' id='icona-pause' onclick='cambioIconaPausePlay()'>
+    <div class='div-per-stream' id='div-per-stream'>
+      <iframe class='stream' id='stream' src='https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1&enablejsapi=1' frameborder='0'></iframe>
+
+      <div class='div-overlay'>
+        <img src='./images/prima_pagina/pause_icon.svg' alt='Pausa / Riprendi' class='icona-live' id='icona-pausa'>
         <div class='pallino-live'></div>
         <p class='scritta-live'>LIVE</p>
         <img src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live' class='icona-live'>
         <p class='counter-live'>10</p>
-        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-live icona-fullscreen' id='icona-fullscreen' onclick='fullScreenOnOff()'>
+        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-live icona-fullscreen' id='icona-fullscreen'>
       </div>
-    
-    <iframe class='stream' src='https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
     </div>
 
     <div class='bottoni-social'>
