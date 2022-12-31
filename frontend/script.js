@@ -1,22 +1,20 @@
-// Fake JSON Creator
-
-function fakeJSON() {
+function FakeJSON() {
     let dict = {
         temperatura: Math.floor(Math.random() * 101),
-        ph: Math.floor(Math.random() * 15),
+        ph: Math.floor(Math.random() * 11),
         mangime: Math.floor(Math.random() * 2),
         livelloAcqua: Math.floor(Math.random() * 4),
     }
 
     return JSON.stringify(dict)
-}
+};
 
 // Real Time Data Updater
 
-function realTimeData() {
+function RealTimeData() {
 
     setInterval( function() {
-        let data = JSON.parse(fakeJSON());
+        let data = JSON.parse(FakeJSON());
 
         // Temperatura
         document.getElementById('meter-temperatura').value = data['temperatura'];
@@ -37,81 +35,41 @@ function realTimeData() {
     }, 1000)
 }
 
-// Fullscreen Icon Change
+document.addEventListener('DOMContentLoaded', RealTimeData());
 
-function cambioIconaFullScreen() {
-    let icona = document.getElementById('icona-fullscreen');
+// Fullscreen Stream
 
-    if (icona.src.match( './images/prima_pagina/icona_fullscreen_on.svg')) {
-        icona.src = './images/prima_pagina/icona_fullscreen_off.svg';
+function fullScreenOnOff() {
+
+    let divStream = document.getElementById("div-per-stream");
+
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
     } else {
-        icona.src = './images/prima_pagina/icona_fullscreen_on.svg';
+        divStream.requestFullscreen();
     }
 }
 
-// Define Events for Stream interaction
+// Fullscreen Icon Change
 
-function defineEvents() {
-    let divStream = document.getElementById('div-per-stream');
-    let iconaPausa = document.getElementById('icona-pausa');
-    let iconaFullscreen = document.getElementById('icona-fullscreen');
+function cambioIconaFullScreen() {
+    let icona = document.getElementById("icona-fullscreen");
 
-    // On Stream double click activate on / off fullscreen
-
-    divStream.addEventListener('dblclick', (event) => {
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
-        } else {
-            divStream.requestFullscreen();
-        }
-
-        event.stopPropagation();
-    });
-
-    // On IconaFullscreen click activate on / off fullscreen
-
-    iconaFullscreen.addEventListener('click', (event) => {
-        if (document.fullscreenElement) {
-            document.exitFullscreen();
-        } else {
-            divStream.requestFullscreen();
-        }
-
-        event.stopPropagation();
-    });
-
-    // On IconaPausa click stop and play the Stream
-
-    iconaPausa.addEventListener('click', (event) => {
-        let stream = document.getElementById('stream');
-
-        if (iconaPausa.src.match('./images/prima_pagina/pause_icon.svg')) {
-            iconaPausa.src = './images/prima_pagina/play_icon.svg';
-            stream.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', "*");
-        } else {
-            iconaPausa.src = './images/prima_pagina/pause_icon.svg';
-            stream.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', "*");
-        }
-
-        event.stopPropagation();
-    });
-
-    // On IconaPausa double click stop the event from propagation
-
-    iconaPausa.addEventListener('dblclick', (event) => {
-        event.stopPropagation()
-    });
+    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
+        icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
+    } else {
+        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
+    }
 }
 
-// On Document Loaded execute this functions
+addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
 
-document.addEventListener('DOMContentLoaded', function() {
-    realTimeData();
-    defineEvents();
-});
+function cambioIconaPausePlay() {
+    let icons = document.getElementById("icona-pause");
 
-// On Document fullscreen mode change execute this functions
-
-document.addEventListener('fullscreenchange', (event) => {
-    cambioIconaFullScreen();
-});
+    if (icons.src.match("./images/prima_pagina/pause_icon.svg")) {
+        icons.src = "./images/prima_pagina/play_icon.svg";
+    } else {
+        icons.src = "./images/prima_pagina/pause_icon.svg";
+    };
+};
