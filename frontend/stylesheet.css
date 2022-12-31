@@ -127,23 +127,26 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 .div-per-stream {
-    grid-column: 2 / 3;
     position: relative;
+    grid-area: 1 / 2 / 2 / 3;
     aspect-ratio: 16 / 9;
 }
 
 .stream {
     width: 100%;
     height: 100%;
+    z-index: 0;
+    position: absolute;
 }
 
-.div-live {
+.div-overlay {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .pallino-live {
@@ -165,6 +168,7 @@ meter::-webkit-meter-even-less-good-value {
 }
 
 .counter-live {
+    margin-left: -0.5rem;
     flex-grow: 1;
 }
 

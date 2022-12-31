@@ -1,9 +1,7 @@
-// Fake JSON Creator
-
 function FakeJSON() {
     let dict = {
         temperatura: Math.floor(Math.random() * 101),
-        ph: Math.floor(Math.random() * 15),
+        ph: Math.floor(Math.random() * 11),
         mangime: Math.floor(Math.random() * 2),
         livelloAcqua: Math.floor(Math.random() * 4),
     }
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', RealTimeData());
 
 function fullScreenOnOff() {
 
-    let divStream = document.getElementById('div-per-stream');
+    let divStream = document.getElementById("div-per-stream");
 
     if (document.fullscreenElement) {
         document.exitFullscreen();
@@ -55,24 +53,23 @@ function fullScreenOnOff() {
 // Fullscreen Icon Change
 
 function cambioIconaFullScreen() {
-    let icona = document.getElementById('icona-fullscreen');
+    let icona = document.getElementById("icona-fullscreen");
 
-    if (icona.src.match( './images/prima_pagina/icona_fullscreen_on.svg')) {
-        icona.src = './images/prima_pagina/icona_fullscreen_off.svg';
+    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
+        icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
     } else {
-        icona.src = './images/prima_pagina/icona_fullscreen_on.svg';
+        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
     }
 }
 
-addEventListener('fullscreenchange', (event) => {cambioIconaFullScreen()});
+addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
 
 function cambioIconaPausePlay() {
-    let icons = document.getElementById('icona-pause');
+    let icons = document.getElementById("icona-pause");
 
-    if (icons.src.match('./images/prima_pagina/pause_icon.svg')) {
-        icons.src = './images/prima_pagina/play_icon.svg';
+    if (icons.src.match("./images/prima_pagina/pause_icon.svg")) {
+        icons.src = "./images/prima_pagina/play_icon.svg";
     } else {
-        icons.src = './images/prima_pagina/pause_icon.svg';
+        icons.src = "./images/prima_pagina/pause_icon.svg";
     };
-} ;
-    
+};
