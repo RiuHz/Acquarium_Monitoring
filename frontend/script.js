@@ -64,6 +64,8 @@ function cambioIconaFullScreen() {
 
 addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
 
+// Play/Pause Icon Change
+
 function cambioIconaPausePlay() {
     let icons = document.getElementById("icona-pause");
 
