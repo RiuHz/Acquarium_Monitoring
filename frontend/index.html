@@ -5,7 +5,7 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <title>Acquario Ferraris</title>
-  <link rel='icon' href='./images/favicon_progetto'>
+  <link rel='icon' href='./images/favicon.ico'>
   <link rel='stylesheet' href='stylesheet.css'>
   <script src='script.js'></script>
 </head>
@@ -17,38 +17,38 @@
 
   <div class='pagina-principale'>
     <div class='div-per-stream' id='div-per-stream'>
-      <iframe class='stream' id='stream' src='https://www.youtube.com/embed/G1IbRujko-A?controls=0&mute=1&loop=1&autoplay=1&enablejsapi=1' frameborder='0' ondblclick="fullScreenOnOff()"></iframe>
-
+      <video class="stream" ondblclick="fullScreenOnOff()" src="../project/test.mp4" muted autoplay loop></video>
+      
       <div class='div-overlay'>
-        <img src="./images/prima_pagina/pause_icon.svg" alt="icona pausa" class='icona-live icona-fullscreen' id='icona-pause' onclick="cambioIconaPausePlay()">
+        <img class='icona-overlay svg-bianco pointer' id='icona-pause' onclick="cambioIconaPausePlay()" src="./images/prima_pagina/pause_icon.svg" alt="icona pausa">
         <div class='pallino-live'></div>
-        <p class='scritta-live'>LIVE</p>
-        <img src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live' class='icona-live'>
-        <p class='counter-live'>10</p>
-        <img src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen' class='icona-live icona-fullscreen' id='icona-fullscreen' onclick="fullScreenOnOff()">
+        <p class='live-overlay'>LIVE</p>
+        <img class='icona-overlay svg-bianco' id="icona-user" src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live'>
+        <p class='scritta-overlay'>10</p>
+        <img class='icona-overlay svg-bianco pointer' id='icona-fullscreen' onclick="fullScreenOnOff()" src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen'>
       </div>
     </div>
 
-    <div class='bottoni-social'>
-      <a href='https://www.facebook.com/GalileoFerrarisNaples/' target='_blank'>
+    <div class='div-social'>
 
-        <div class='link-div'>
+      <a href='https://www.facebook.com/GalileoFerrarisNaples/' target='_blank'>
+        <div class='div-link'>
           <p class='label-social'>Facebook Ferraris</p>
-          <img src='./images/prima_pagina/facebook_icon.svg' alt='Facebook' class='icona-social'>
+          <img class='icona-social svg-bianco' src='./images/prima_pagina/facebook_icon.svg' alt='Facebook'>
         </div>
       </a>
 
       <a href='https://www.instagram.com/galileo_ferraris_/' target='_blank'>
-        <div class='link-div'>
+        <div class='div-link'>
           <p class='label-social'>Instagram Ferraris</p>
-          <img src='./images/prima_pagina/instagram_icon.svg' alt='Instagram' class='icona-social'>
+          <img class='icona-social svg-bianco' src='./images/prima_pagina/instagram_icon.svg' alt='Instagram'>
         </div>
       </a>
 
       <a href='https://www.itiferraris.edu.it/' target='_blank'>
-        <div class='link-div'>
+        <div class='div-link'>
           <p class='label-social'>Homepage Ferraris</p>
-          <img src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris' class='icona-social'>
+          <img class='icona-social svg-bianco' src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris'>
         </div>
       </a>
     </div>
@@ -66,31 +66,31 @@
     <div class='div-dati-in-tempo-reale'>
       
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura' class='icona-dati'>
-        <label class='label-dato-live' for='barra-temperatura'>Temperatura</label>
-        <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value='24'></meter>
-        <p class='dato-live' id='p-temperatura'>24°C</p>
+        <img class='icona-dati svg-bianco' src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura'>
+        <label class='label-dato-live' for='meter-temperatura'>Temperatura</label>
+        <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value=''></meter>
+        <p class='dato-live' id='p-temperatura'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_ph.svg' alt='PH' class='icona-dati'>
-        <label class='label-dato-live' for='barra-ph'>PH</label>
-        <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value='7'></meter>
-        <p class='dato-live' id='p-ph'>7</p>
+        <img src='./images/pagina_dati_live/icona_ph.svg' alt='PH' class='icona-dati svg-bianco'>
+        <label class='label-dato-live' for='meter-ph'>PH</label>
+        <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value=''></meter>
+        <p class='dato-live' id='p-ph'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime' class='icona-dati'>
-        <label class='label-dato-live' for='barra-mangime'>Mangime</label>
-        <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value='0'></meter>
-        <p class='dato-live' id='p-mangime'>No</p>
+        <img src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime' class='icona-dati svg-bianco'>
+        <label class='label-dato-live' for='meter-mangime'>Mangime</label>
+        <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value=''></meter>
+        <p class='dato-live' id='p-mangime'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua' class='icona-dati'>
-        <label class='label-dato-live' for='barra-livello-acqua'>Livello dell'acqua</label>
-        <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value='2'></meter>
-        <p class='dato-live' id='p-livello-acqua'>Alto</p>
+        <img src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua' class='icona-dati svg-bianco'>
+        <label class='label-dato-live' for='meter-livello-acqua'>Livello dell'acqua</label>
+        <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value=''></meter>
+        <p class='dato-live' id='p-livello-acqua'></p>
       </div>
    
     </div>
@@ -136,4 +136,3 @@
 
 </body>
 </html>
-
