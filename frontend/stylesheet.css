@@ -269,21 +269,25 @@ meter::-webkit-meter-even-less-good-value {
 /* Footer */
 
 .footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--nero);
 }
 
-.info-footer {
-    margin: 2rem 0;
-    width: 400px;
-    text-align: center;
+.titolo-footer {
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
-.email {
+
+.info-footer {
+    margin: 2rem auto;
+    width: auto;
+    height: auto;
+}
+
+.link {
     text-decoration: underline;
     color: var(--blu);
 }
@@ -296,10 +300,69 @@ meter::-webkit-meter-even-less-good-value {
 
     /* Prima Pagina */
 
+    .pagina-principale {
+        display: block;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .div-per-stream {
+        width: 100%;
+    }
+
+    .div-social {
+        position: fixed;
+        bottom: 20px;
+        right: 10px;
+    }
+
     /* Dati in Tempo Reale */
 
+    .card {
+        margin: 2.5rem;
+    }
+    
+    .div-dato {
+        grid-row-gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .icona-dati, .label-dato-live, .dato-live {
+        margin: 0;
+    }
+
+    .icona-dati {
+        order: 1;
+    }
+
+    .dato-live {
+        order: 2;
+    }
+
+    .label-dato-live{
+        order: 3;
+        color: var(--grigio-chiaro);
+        text-align: center;
+    }
+    
+    .barra-dato{
+        display: none;
+    }
     /* Footer */
 
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-footer {
+        margin: 2rem;
+    }
+    
 }
 
 /* Animation */
