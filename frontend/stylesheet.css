@@ -1,5 +1,5 @@
 :root {
-    --verda-acqua: #56B6C2;
+    --verde-acqua: #56B6C2;
     --blu: #61AFEF;
     --rosso: #E06C75;
     --arancione: #D19A66;
@@ -106,13 +106,8 @@ meter::-webkit-meter-even-less-good-value {
 /* HTML Class */
 
 .titolo {
-    margin: 1.5rem 0;
     text-align: center;
     font-family: Aquatico;
-}
-
-.svg-bianco {
-    filter: invert(91%) sepia(92%) saturate(31%) hue-rotate(198deg) brightness(107%) contrast(100%);
 }
 
 .pointer {
@@ -194,11 +189,21 @@ meter::-webkit-meter-even-less-good-value {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--grigio-scuro);
+    background-color: transparent;
     border: var(--bianco) solid;
     border-radius: 100%;
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.div-link:hover {
+    box-shadow: 0 10px 50px var(--ombra);
+}
+
+.div-link:hover .label-social {
+    display: inline;
+    opacity: 1;
+    animation: social-fade-in 0.5s ease-in;
 }
 
 .icona-social {
@@ -213,16 +218,6 @@ meter::-webkit-meter-even-less-good-value {
     text-align: end;
     white-space: nowrap;
     width: auto;
-}
-
-.div-link:hover {
-    box-shadow: 0 10px 50px var(--ombra);
-}
-
-.div-link:hover .label-social {
-    display: inline;
-    opacity: 1;
-    animation: social-fade-in 0.5s ease-in;
 }
 
 /* Dati in Tempo Reale */
@@ -298,8 +293,15 @@ meter::-webkit-meter-even-less-good-value {
 
     /* HTML Class */
 
+    navbar {
+        display: block;
+        background-color: var(--nero);
+        padding: 1rem 0;
+    }
+
     h1 {
         font-size: 1.75rem;
+        margin: 0;
     }
 
     h2 {
@@ -323,6 +325,16 @@ meter::-webkit-meter-even-less-good-value {
         position: fixed;
         bottom: 20px;
         right: 10px;
+    }
+
+    .div-link{
+        box-shadow: 0 10px 50px var(--ombra);
+    }
+    
+    .div-link:hover .label-social {
+        display: none;
+        opacity: 1;
+        animation: social-fade-in 0.5s ease-in;
     }
 
     /* Dati in Tempo Reale */
