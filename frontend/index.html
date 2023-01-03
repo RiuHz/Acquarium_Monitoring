@@ -13,19 +13,21 @@
 
   <!-- INIZIO PRIMA PAGINA -->
 
-  <h1 class='titolo'>Acquario Ferraris</h1>
+  <navbar>
+    <h1 class='titolo'>Acquario Ferraris</h1>
+  </navbar>
 
   <div class='pagina-principale'>
     <div class='div-per-stream' id='div-per-stream'>
-      <video class="stream" ondblclick="fullScreenOnOff()" src="../project/test.mp4" muted autoplay loop></video>
+      <video class='stream' ondblclick='fullScreenOnOff()' src='../project/test.mp4' muted autoplay loop></video>
       
       <div class='div-overlay'>
-        <img class='icona-overlay svg-bianco pointer' id='icona-pause' onclick="cambioIconaPausePlay()" src="./images/prima_pagina/pause_icon.svg" alt="icona pausa">
+        <img class='icona-overlay pointer' id='icona-pause' onclick='cambioIconaPausePlay()' src='./images/prima_pagina/pause_icon.svg' alt='icona pausa'>
         <div class='pallino-live'></div>
         <p class='live-overlay'>LIVE</p>
-        <img class='icona-overlay svg-bianco' id="icona-user" src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live'>
+        <img class='icona-overlay' id='icona-user' src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live'>
         <p class='scritta-overlay'>10</p>
-        <img class='icona-overlay svg-bianco pointer' id='icona-fullscreen' onclick="fullScreenOnOff()" src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen'>
+        <img class='icona-overlay pointer' id='icona-fullscreen' onclick='fullScreenOnOff()' src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen'>
       </div>
     </div>
 
@@ -34,21 +36,21 @@
       <a href='https://www.facebook.com/GalileoFerrarisNaples/' target='_blank'>
         <div class='div-link'>
           <p class='label-social'>Facebook Ferraris</p>
-          <img class='icona-social svg-bianco' src='./images/prima_pagina/facebook_icon.svg' alt='Facebook'>
+          <img class='icona-social' src='./images/prima_pagina/facebook_icon.svg' alt='Facebook'>
         </div>
       </a>
 
       <a href='https://www.instagram.com/galileo_ferraris_/' target='_blank'>
         <div class='div-link'>
           <p class='label-social'>Instagram Ferraris</p>
-          <img class='icona-social svg-bianco' src='./images/prima_pagina/instagram_icon.svg' alt='Instagram'>
+          <img class='icona-social' src='./images/prima_pagina/instagram_icon.svg' alt='Instagram'>
         </div>
       </a>
 
       <a href='https://www.itiferraris.edu.it/' target='_blank'>
         <div class='div-link'>
           <p class='label-social'>Homepage Ferraris</p>
-          <img class='icona-social svg-bianco' src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris'>
+          <img class='icona-social' src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris'>
         </div>
       </a>
     </div>
@@ -66,28 +68,28 @@
     <div class='div-dati-in-tempo-reale'>
       
       <div class='div-dato'>
-        <img class='icona-dati svg-bianco' src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura'>
+        <img class='icona-dati' src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura'>
         <label class='label-dato-live' for='meter-temperatura'>Temperatura</label>
         <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value=''></meter>
         <p class='dato-live' id='p-temperatura'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_ph.svg' alt='PH' class='icona-dati svg-bianco'>
+        <img class='icona-dati' src='./images/pagina_dati_live/icona_ph.svg' alt='PH'>
         <label class='label-dato-live' for='meter-ph'>PH</label>
         <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value=''></meter>
         <p class='dato-live' id='p-ph'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime' class='icona-dati svg-bianco'>
+        <img class='icona-dati' src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime'>
         <label class='label-dato-live' for='meter-mangime'>Mangime</label>
         <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value=''></meter>
         <p class='dato-live' id='p-mangime'></p>
       </div>
   
       <div class='div-dato'>
-        <img src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua' class='icona-dati svg-bianco'>
+        <img class='icona-dati' src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua'>
         <label class='label-dato-live' for='meter-livello-acqua'>Livello dell'acqua</label>
         <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value=''></meter>
         <p class='dato-live' id='p-livello-acqua'></p>
@@ -107,28 +109,28 @@
 
   <footer class='footer'>
     
-    <p class='info-footer'>
-      Istituto Tecnico Industriale Galileo Ferraris<br>
+    <div class='info-footer'>
+      <p class='titolo-footer'>Istituto Tecnico Industriale Galileo Ferraris</p>
       Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
-      PEC: <a class='email' href='mailto:natf17000q@pec.istruzione.it'>natf17000q@pec.istruzione.it</a><br>
-      PEO: <a class='email' href='mailto:natf17000q@istruzione.it'>natf17000q@istruzione.it</a><br>
+      Numero di Telefono: <a class='link' href='tel:0817022150'>081-7022150</a><br>
+      PEC: <a class='link' href='mailto:natf17000q@pec.istruzione.it'>natf17000q@pec.istruzione.it</a><br>
+      PEO: <a class='link' href='mailto:natf17000q@istruzione.it'>natf17000q@istruzione.it</a><br>
       Cod. Mecc. natf17000q
-    </p>
+    </div>
       
-    <p class='info-footer'>
-      Web Server Realizzato da<br>
-      5BSE 2022<br>
-      Logistica sensori Realizzata da<br>
-      5ASE / 5AUT 2022
-    </p>
+    <div class='info-footer'>
+      <p class='titolo-footer'>Progetto Realizzato da</p>
+      Pagina Web e Server: 5BSE 2022 <br>
+      Sensori e Logistica: 5AUT 2022<br>
+    </div>
       
-    <p class='info-footer'>
-      Hanno lavorato al progetto<br>
+    <div class='info-footer'>
+      <p class='titolo-footer'>Hanno lavorato al progetto</p>
       Corsetti Gennaro<br>
       Di Tota Gaetano<br>
       Guidelli Michael<br>
       Lista Amedeo
-    </p>
+    </div>
   
   </footer>
    
