@@ -298,6 +298,14 @@ meter::-webkit-meter-even-less-good-value {
 
     /* HTML Class */
 
+    h1 {
+        font-size: 1.5rem
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
     /* Prima Pagina */
 
     .pagina-principale {
@@ -341,6 +349,7 @@ meter::-webkit-meter-even-less-good-value {
 
     .dato-live {
         order: 2;
+        font-size: 16px;
     }
 
     .label-dato-live{
