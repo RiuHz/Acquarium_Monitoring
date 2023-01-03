@@ -329,6 +329,7 @@ meter::-webkit-meter-even-less-good-value {
 
     .card {
         margin: 2.5rem;
+        padding: 1rem;
     }
     
     .div-dato {
