@@ -314,15 +314,17 @@ meter::-webkit-meter-even-less-good-value {
         display: block;
         width: 100%;
         height: 5px;
-        background-color: transparent;
+        background-color: var(--nero);
         position: fixed;
         top: 0;
+        z-index: 1;
     }
 
     .barra-progressiva {
         display: block;
         height: 5px;
         background-color: var(--bianco);
+        width: 0%;
     }
 
     .pagina-principale {
