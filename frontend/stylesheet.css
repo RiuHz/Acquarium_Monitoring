@@ -291,6 +291,12 @@ meter::-webkit-meter-even-less-good-value {
 
 @media all and (max-width: 800px) {
 
+    /* Scrollbar */
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
     /* HTML Class */
 
     navbar {
