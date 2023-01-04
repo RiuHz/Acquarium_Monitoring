@@ -343,6 +343,11 @@ meter::-webkit-meter-even-less-good-value {
         margin: 2.5rem;
         padding: 1rem;
     }
+
+    .div-dati-in-tempo-reale {
+        grid-row-gap: 1rem;
+        margin-top: 2rem;
+    }
     
     .div-dato {
         display: grid;
