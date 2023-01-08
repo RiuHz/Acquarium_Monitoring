@@ -7,7 +7,7 @@ function FakeJSON() {
     }
 
     return JSON.stringify(dict)
-};
+}
 
 // Real Time Data Updater
 
@@ -41,40 +41,49 @@ document.addEventListener('DOMContentLoaded', RealTimeData());
 
 function fullScreenOnOff() {
 
-    let divStream = document.getElementById("div-per-stream");
+    let divStream = document.getElementById('div-per-stream');
+    let userAgent = navigator.userAgent;
 
-    if (document.fullscreenElement) {
-        document.exitFullscreen();
-    } else {
-        divStream.requestFullscreen();
+    if(userAgent.match(/chrome|chromium|crios/i)){
+        if (document.fullscreenElement) {document.exitFullscreen()} else {divStream.requestFullscreen()}
+    } else if(userAgent.match(/firefox|fxios/i)){
+        if (document.fullscreenElement) {document.mozCancelFullScreen()} else {divStream.mozRequestFullScreen()}
+    } else if(userAgent.match(/safari/i)){
+        if (document.fullscreenElement) {document.webkitCancelFullscreen()} else {divStream.webkitRequestFullscreen()}
+    } else if(userAgent.match(/opr\//i)){
+        if (document.fullscreenElement) {document.exitFullscreen()} else {divStream.requestFullscreen();}
+    } else if(userAgent.match(/edg/i)){
+        if (document.fullscreenElement) {document.exitFullscreen()} else {divStream.requestFullscreen()}
     }
 }
 
 // Fullscreen Icon Change
 
 function cambioIconaFullScreen() {
-    let icona = document.getElementById("icona-fullscreen");
+    let icona = document.getElementById('icona-fullscreen');
 
-    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
-        icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
+    if (icona.src.match( './images/prima_pagina/icona_fullscreen_on.svg')) {
+        icona.src = './images/prima_pagina/icona_fullscreen_off.svg';
     } else {
-        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
+        icona.src = './images/prima_pagina/icona_fullscreen_on.svg';
     }
 }
 
-addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
+addEventListener('fullscreenchange', (event) => {cambioIconaFullScreen()});
 
 // Play/Pause Icon Change
 
 function cambioIconaPausePlay() {
-    let icons = document.getElementById("icona-pause");
+    let icons = document.getElementById('icona-pause');
 
-    if (icons.src.match("./images/prima_pagina/pause_icon.svg")) {
-        icons.src = "./images/prima_pagina/play_icon.svg";
+    if (icons.src.match('./images/prima_pagina/pause_icon.svg')) {
+        icons.src = './images/prima_pagina/play_icon.svg';
     } else {
-        icons.src = "./images/prima_pagina/pause_icon.svg";
+        icons.src = './images/prima_pagina/pause_icon.svg';
     };
-};
+}
+
+// White Scrollbar on Mobile
 
 window.onscroll = function() {funzioneBarraScrollDown()};
 
@@ -82,5 +91,5 @@ function funzioneBarraScrollDown() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
-  document.getElementById("barra").style.width = scrolled + "%";
+  document.getElementById('barra').style.width = scrolled + '%';
 }
