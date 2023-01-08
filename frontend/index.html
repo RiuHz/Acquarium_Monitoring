@@ -9,136 +9,184 @@
   <link rel='stylesheet' href='stylesheet.css'>
   <script src='script.js'></script>
 </head>
-<body>
+<body id="Progetto">
 
-  <!-- INIZIO PRIMA PAGINA -->
-
+  <!-- NAVBAR -->
   <navbar>
-    <h1 class='titolo'>Acquario Ferraris</h1>
+    <h2 class='titolo'><span class="blu-span titolo" >Acquario</span>Ferraris</h2>
     
+    <a class="tasti-navbar" href="#Progetto">Il Progetto</a>
+    <a class="tasti-navbar" href="#Streaming">Streaming</a>
+    <a class="tasti-navbar" href="#Dati">Dati in tempo reale</a>
+    <a class="tasti-navbar" href="#" >Query</a>
+    <a class="tasti-navbar" href="#Team">Team</a>
+
     <div class="barra-progressiva-container">
       <div class="barra-progressiva" id="barra"></div>
     </div>
   </navbar>
 
-  <div class='pagina-principale'>
-    <div class='div-per-stream' id='div-per-stream'>
-      <video class='stream' ondblclick='fullScreenOnOff()' src='../project/test.mp4' muted autoplay loop></video>
+  <!-- LANDING PAGE -->
+  <section>
+    <div class="landing-page">  
+      <h1 class="titolo-vita-pesce">Segui la vita di<br>
+        un <span class="blu-span">Pesce</span>.
+      </h1>
+
+      <p class="testo-vita-pesce">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eleifend rutrum 
+        neque eget feugiat. Nam eu consequat tortor. Donec ultricies maximus augue, in maximus lectus ornare gravida. 
+        Sed elit ligula, molestie ac dapibus at, fringilla id eros. Morbi et lacus aliquam, placerat ante quis, tristique 
+        tortor. In nec augue ex. In vel pellentesque metus. Ut non mi sed nisi viverra tristique ac sed erat. Quisque id 
+        massa ac nibh congue rutrum sed non erat. Curabitur sagittis felis a quam rutrum efficitur.</p>
+
       
-      <div class='div-overlay'>
-        <img class='icona-overlay pointer' id='icona-pause' onclick='cambioIconaPausePlay()' src='./images/prima_pagina/pause_icon.svg' alt='icona pausa'>
-        <div class='pallino-live'></div>
-        <p class='live-overlay'>LIVE</p>
-        <img class='icona-overlay' id='icona-user' src='./images/prima_pagina/utente_live.svg' alt='Utenti in Live'>
-        <p class='scritta-overlay'>10</p>
-        <img class='icona-overlay pointer' id='icona-fullscreen' onclick='fullScreenOnOff()' src='./images/prima_pagina/icona_fullscreen_on.svg' alt='Fullscreen'>
-      </div>
-    </div>
+      <img src="./images/landing_page/barriera_corallina.jpg" class="barriera-corallina">
+      <img src="./images/landing_page/foto_pesce.png" class="pesce">
 
-    <div class='div-social'>
 
-      <a href='https://www.facebook.com/GalileoFerrarisNaples/' target='_blank'>
-        <div class='div-link'>
-          <p class='label-social'>Facebook Ferraris</p>
-          <img class='icona-social' src='./images/prima_pagina/facebook_icon.svg' alt='Facebook'>
-        </div>
-      </a>
-
-      <a href='https://www.instagram.com/galileo_ferraris_/' target='_blank'>
-        <div class='div-link'>
-          <p class='label-social'>Instagram Ferraris</p>
-          <img class='icona-social' src='./images/prima_pagina/instagram_icon.svg' alt='Instagram'>
-        </div>
-      </a>
-
-      <a href='https://www.itiferraris.edu.it/' target='_blank'>
-        <div class='div-link'>
-          <p class='label-social'>Homepage Ferraris</p>
-          <img class='icona-social' src='./images/prima_pagina/icona_ferraris.svg' alt='Homepage Ferraris'>
-        </div>
+      <a href="#Streaming" class="tasto-acqua">
+        <span class="tasto-acqua-span">Inizia Ora!</span>
+        <div class="acqua"></div>
       </a>
     </div>
+  </section>
+
+  <!-- PAGINA STREAM -->
+  <section id="Streaming">
+    <div class='pagina-stream'>
+      
+      <h1 class="titolo-stream">Segui in <span class="blu-span">Diretta</span> la <br> vita di un Pesce.</h1>
+      <p class="testo-stream">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos magnam excepturi officia! 
+        Rerum, id distinctio ut beatae quas pariatur quod qui ratione rem assumenda quaerat non illo velit molestiae.
+      </p>
+      
+      <video class='stream' src='../project/test.mp4' muted autoplay loop controls disablepictureinpicture controlslist="nodownload noplaybackrate"></video>
     
-  </div>
+    </div>
 
-  <!-- FINE PRIMA PAGINA -->
-
-  <!-- INIZIO PAGINA DATI IN TEMPO REALE -->
-
-  <div class='card'>
-
-    <h2 class='titolo'>DATI IN TEMPO REALE</h2>
+  </section>
   
+  <!-- DATI IN TEMPO REALE -->
+  <section id="Dati">
     <div class='div-dati-in-tempo-reale'>
-      
-      <div class='div-dato'>
-        <img class='icona-dati' src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura'>
-        <label class='label-dato-live' for='meter-temperatura'>Temperatura</label>
-        <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value=''></meter>
-        <p class='dato-live' id='p-temperatura'></p>
-      </div>
-  
-      <div class='div-dato'>
-        <img class='icona-dati' src='./images/pagina_dati_live/icona_ph.svg' alt='PH'>
-        <label class='label-dato-live' for='meter-ph'>PH</label>
-        <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value=''></meter>
-        <p class='dato-live' id='p-ph'></p>
-      </div>
-  
-      <div class='div-dato'>
-        <img class='icona-dati' src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime'>
-        <label class='label-dato-live' for='meter-mangime'>Mangime</label>
-        <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value=''></meter>
-        <p class='dato-live' id='p-mangime'></p>
-      </div>
-  
-      <div class='div-dato'>
-        <img class='icona-dati' src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua'>
-        <label class='label-dato-live' for='meter-livello-acqua'>Livello dell'acqua</label>
-        <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value=''></meter>
-        <p class='dato-live' id='p-livello-acqua'></p>
-      </div>
-   
-    </div>
 
-  </div>
-  
-  <!-- FINE PAGINA DATI IN TEMPO REALE -->
-
-  <!-- INIZIO PAGINA QUERY-->
-
-  <!-- FINE PAGINA QUERY-->
-
-  <!-- INIZIO FOOTER -->
-
-  <footer class='footer'>
+      <h1 class="titolo-dati">Dati in tempo <span class="blu-span">Reale</span>.</h1>
+      <p class="testo-dati">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Cumque sequi tempora illo iure est consectetur animi hic eligendi natus earum, 
+        sunt unde libero, tenetur adipisci sit. Quaerat molestiae quia tempore?
+      </p>
     
+      <div class='card-dati-in-tempo-reale'>
+        <div class='div-dato'>
+          <img class='icona-dati' src='./images/pagina_dati_live/icona_temperatura.svg' alt='Temperatura'>
+          <label class='label-dato-live' for='meter-temperatura'>Temperatura</label>
+          <meter class='barra-dato' id='meter-temperatura' min='-1' max='100' optimum='22' low='18' high='26' value=''></meter>
+          <p class='dato-live' id='p-temperatura'></p>
+        </div>
+    
+        <div class='div-dato'>
+          <img class='icona-dati' src='./images/pagina_dati_live/icona_ph.svg' alt='PH'>
+          <label class='label-dato-live' for='meter-ph'>PH</label>
+          <meter class='barra-dato' id='meter-ph' min='-1' max='14' optimum='6' low='4' high='8' value=''></meter>
+          <p class='dato-live' id='p-ph'></p>
+        </div>
+    
+        <div class='div-dato'>
+          <img class='icona-dati' src='./images/pagina_dati_live/icona_mangine.svg' alt='Mangime'>
+          <label class='label-dato-live' for='meter-mangime'>Mangime</label>
+          <meter class='barra-dato' id='meter-mangime' min='-1' max='0.001' optimum='0.5' low='0.25' high='1' value=''></meter>
+          <p class='dato-live' id='p-mangime'></p>
+        </div>
+    
+        <div class='div-dato'>
+          <img class='icona-dati' src='./images/pagina_dati_live/icona_livello_acqua.svg'alt='Livello dell&quot;Acqua'>
+          <label class='label-dato-live' for='meter-livello-acqua'>Livello dell'acqua</label>
+          <meter class='barra-dato' id='meter-livello-acqua' min='-0.5' max='2' optimum='1' low='0.5' high='1.5' value=''></meter>
+          <p class='dato-live' id='p-livello-acqua'></p>
+        </div>
+    
+      </div>
+
+    </div>
+  </section>
+
+  <!--CONTATTI -->
+  <section id="Team">
+    <div class="contatti">
+      <h1 class="titolo-contatti">Conosci il <span class="blu-span">Team</span>.</h1>
+
+      <div class="card-sviluppatori" id="sviluppatore-1">
+        <img class="immagine-profilo" src="./images/contact_page/gandalf.jpg" alt="">
+        <h3 class="nome">Gennaro Corsetti</h3>
+        <p class="sviluppatore">Sviluppatore</p>
+        <div class="sviluppatore-social">
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/github_icon.svg" alt="Github"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/linkedin_icon.svg" alt="LinkedIn"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/email_icon.svg" alt="Email"></a>
+        </div>
+      </div>
+
+      <div class="card-sviluppatori"  id="sviluppatore-2">
+        <img class="immagine-profilo" src="./images/contact_page/gandalf.jpg" alt="">
+        <h3 class="nome">Gaetano Di Tota</h3>
+        <p class="sviluppatore">Sviluppatore</p>
+        <div class="sviluppatore-social">
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/github_icon.svg" alt="Github"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/linkedin_icon.svg" alt="LinkedIn"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/email_icon.svg" alt="Email"></a>
+        </div>
+      </div>
+
+      <div class="card-sviluppatori"  id="sviluppatore-3">
+        <img class="immagine-profilo" src="./images/contact_page/gandalf.jpg" alt="">
+        <h3 class="nome">Michael Guidelli</h3>
+        <p class="sviluppatore">Sviluppatore</p>
+        <div class="sviluppatore-social">
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/github_icon.svg" alt="Github"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/linkedin_icon.svg" alt="LinkedIn"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/email_icon.svg" alt="Email"></a>
+        </div>
+      </div>
+
+      <div class="card-sviluppatori"  id="sviluppatore-4">
+        <img class="immagine-profilo" src="./images/contact_page/gandalf.jpg" alt="">
+        <h3 class="nome">Amedeo Lista</h3>
+        <p class="sviluppatore">Sviluppatore</p>
+        <div class="sviluppatore-social">
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/github_icon.svg" alt="Github"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/linkedin_icon.svg" alt="LinkedIn"></a>
+          <a class="link-sviluppatori" href=""><img class="icona" src="./images/contact_page/email_icon.svg" alt="Email"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUERY -->
+
+  <!-- FOOTER -->
+  <footer class='footer'>
+
+    <h2 class='titolo-footer'><span class="blu-span titolo" >Acquario</span>Ferraris</h2>
+
+    <iframe class="mappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.664522119173!2d14.229501915733469!3d40.90117333395699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b07b4cc15de19%3A0xdc49399b438612f3!2sIstituto%20Tecnico%20Industriale%20Galileo%20Ferraris!5e0!3m2!1sit!2sit!4v1673152432224!5m2!1sit!2sit" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     <div class='info-footer'>
-      <p class='titolo-footer'>Istituto Tecnico Industriale Galileo Ferraris</p>
-      Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
+      <p class='titolo-info'>Istituto Tecnico Industriale Galileo Ferraris</p>
+      Indirizzo: Via A. Labriola, Lotto 2G - Scampia - Napoli<br>
+      HomePage Feraris: <a class="link" target="_blank" href="https://www.itiferraris.edu.it/">https://www.itiferraris.edu.it</a><br>
       Numero di Telefono: <a class='link' href='tel:0817022150'>081-7022150</a><br>
       PEC: <a class='link' href='mailto:natf17000q@pec.istruzione.it'>natf17000q@pec.istruzione.it</a><br>
       PEO: <a class='link' href='mailto:natf17000q@istruzione.it'>natf17000q@istruzione.it</a><br>
       Cod. Mecc. natf17000q
     </div>
-      
-    <div class='info-footer'>
-      <p class='titolo-footer'>Progetto Realizzato da</p>
-      Pagina Web e Server: 5BSE 2022 <br>
-      Sensori e Logistica: 5AUT 2022<br>
+    
+    <div class="rule">
+      <hr>
     </div>
-      
-    <div class='info-footer'>
-      <p class='titolo-footer'>Hanno lavorato al progetto</p>
-      Corsetti Gennaro<br>
-      Di Tota Gaetano<br>
-      Guidelli Michael<br>
-      Lista Amedeo
-    </div>
-  
-  </footer>
-   
-<!-- FINE FOOTER -->
 
+    <p class="copyright">&copy; <span id="data-sito"></span> <span class="titolo"><span class="blu-span titolo">Acquario</span>Ferraris</span>. Tutti i diritti riservati.</p>
+
+  </footer>  
+  
 </body>
 </html>

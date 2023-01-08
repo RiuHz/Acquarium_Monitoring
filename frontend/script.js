@@ -35,46 +35,20 @@ function RealTimeData() {
     }, 1000)
 }
 
-document.addEventListener('DOMContentLoaded', RealTimeData());
+// Copyright Updater
 
-// Fullscreen Stream
+function copyrightUpdater() {
+    let span = document.getElementById('data-sito');
 
-function fullScreenOnOff() {
-
-    let divStream = document.getElementById("div-per-stream");
-
-    if (document.fullscreenElement) {
-        document.exitFullscreen();
-    } else {
-        divStream.requestFullscreen();
-    }
+    span.innerText = new Date().getFullYear()
 }
 
-// Fullscreen Icon Change
+document.addEventListener('DOMContentLoaded', (event) => {
+    copyrightUpdater();
+    RealTimeData();
+});
 
-function cambioIconaFullScreen() {
-    let icona = document.getElementById("icona-fullscreen");
-
-    if (icona.src.match( "./images/prima_pagina/icona_fullscreen_on.svg")) {
-        icona.src = "./images/prima_pagina/icona_fullscreen_off.svg";
-    } else {
-        icona.src = "./images/prima_pagina/icona_fullscreen_on.svg";
-    }
-}
-
-addEventListener("fullscreenchange", (event) => {cambioIconaFullScreen()});
-
-// Play/Pause Icon Change
-
-function cambioIconaPausePlay() {
-    let icons = document.getElementById("icona-pause");
-
-    if (icons.src.match("./images/prima_pagina/pause_icon.svg")) {
-        icons.src = "./images/prima_pagina/play_icon.svg";
-    } else {
-        icons.src = "./images/prima_pagina/pause_icon.svg";
-    };
-};
+// Progressive bar x-index scroll
 
 window.onscroll = function() {funzioneBarraScrollDown()};
 
