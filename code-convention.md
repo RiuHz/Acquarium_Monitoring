@@ -1,14 +1,14 @@
 # HTML
 ```html
 <body>
-  <div class="div-for-something">
-    <div class="another-div-for-something">
+  <div class='div-for-something'>
+    <div class='another-div-for-something'>
       <p>Just a text.<\p>
     </div>
   </div>
-  <div class="div-for-something-else">
-    <div class="another-div-for-something-else">
-      <img src="avatar.png" alt="Avatar" width="500" height="600">
+  <div class='div-for-something-else'>
+    <div class='another-div-for-something-else'>
+      <img src='avatar.png' alt='Avatar' width='500' height='600'>
     </div>
   </div>
 </body>
@@ -37,18 +37,32 @@ long-name-property: value;
 }
 ```
 
-# Python
-```python
-from module import Class
+# Javascript
+```Javascript
+// Function Short Description
 
-def my_fun(x: int, y: int) -> int:
-  """"
-  Short Description.
+function myFunc(x, y) {
+    let z = x + y;
+    
+    return z;
+  };
   
-  :param x, y: numbers to add
-  :return: the total
-  """
-  return x + y
+  for (let i = 0; i < 5; i++) {
+    x += i;
+  };
+  
+  if (time < 20) {
+    greeting = 'Good day';
+  } else {
+    greeting = 'Good evening';
+  };
+  
+  const person = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 50,
+    eyeColor: 'blue'
+  };
 ```
 
 # PHP
@@ -74,6 +88,20 @@ function foo($x, $y)
 }
 
 ?>
+```
+
+# Python
+```python
+from module import Class
+
+def my_fun(x: int, y: int) -> int:
+  '''
+  Short Description.
+  
+  :param x, y: numbers to add
+  :return: the total
+  '''
+  return x + y
 ```
 
 # MySQL
