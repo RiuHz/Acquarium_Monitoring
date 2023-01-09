@@ -81,10 +81,11 @@ navbar {
 
 section {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5em 0;
 }
 
 a {
@@ -308,7 +309,6 @@ video::-webkit-media-controls-fullscreen-button {
 .stream {
     grid-area: 2 / 1 / 6 / 2;
     aspect-ratio: 16 / 9;
-    height: 100%;
     width: 100%;
 }
 
@@ -569,23 +569,52 @@ video::-webkit-media-controls-fullscreen-button {
 
     .titolo-dati {
         width: 90%;
+        margin: 0 auto;
     }
 
     .testo-dati {
         width: 90%;
+        margin: 0 auto;
     }
 
-    .card-dati-in-tempo-reale{
+    .card-dati-in-tempo-reale {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        width: auto;
+        height: auto;
+    }
+
+    .div-dato {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        padding: 2em;
+    }
+
+    .icona-dati {
+        margin: 0;
+        order: 1;
+    }
+
+    .label-dato-live {
+        order: 3;
+        color: var(--grigio-chiaro);
+        white-space: nowrap;
     }
 
     .barra-dato {
-        width: 10em;
+        display: none;
     }
+
+    .dato-live {
+        order: 2;
+        margin: 0;
+        font-size: 1.5em;
+    }
+
 }
 
 /* < 1300px */
@@ -606,26 +635,6 @@ video::-webkit-media-controls-fullscreen-button {
         display: none;
     }
 
-    /* STREAMING */
-
-    .pagina-stream {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .stream {
-        order: 1;
-    }
-
-    .titolo-stream {
-        order: 2;
-    }
-
-    .testo-stream {
-        order: 3;
-    }
 }
 
 /* Mobile */
@@ -728,52 +737,6 @@ video::-webkit-media-controls-fullscreen-button {
         margin: 0 auto;
     }
     
-    .card-dati-in-tempo-reale {
-        margin: 0;
-    }
-
-    .testo-dati {
-        margin: 1em auto 2em auto;
-    }
-
-    .card-dati-in-tempo-reale {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-column-gap: 2em;
-        grid-row-gap: 2em;
-        width: auto;
-        height: auto;
-    }
-
-    .div-dato {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icona-dati {
-        margin: 0;
-        order: 1;
-    }
-
-    .label-dato-live {
-        order: 3;
-        color: var(--grigio-chiaro);
-        white-space: nowrap;
-    }
-
-    .barra-dato {
-        display: none;
-    }
-
-    .dato-live {
-        order: 2;
-        margin: 0;
-        font-size: 1.5em;
-    }
-
     /* Contatti */
 
     .contatti {
