@@ -156,7 +156,7 @@ video::-webkit-media-controls-fullscreen-button {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .barra-progressiva {
@@ -265,7 +265,6 @@ video::-webkit-media-controls-fullscreen-button {
     width: 200px;
     height: 200px;
     background-color: var(--blu);
-    box-shadow: inset 0 0 50px var(--ombra);
     transition: .5s;
 }
 
@@ -550,29 +549,22 @@ video::-webkit-media-controls-fullscreen-button {
     text-align: center;
 }
 
-/* < 1300px */
+/* < 1800px */
 
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1800px) {
 
-    /* LANDING PAGE */
+    /* Landing Page */
 
     .landing-page {
-        grid-template-columns: 20em 1fr 3fr;
+        margin-left: 5em;
     }
 
-    .barriera-corallina {
-        filter: none;
-    }
-
-    .pesce {
-        display: none;
-    }
 }
 
 /* < 1500px */
 
 @media all and (max-width: 1500px) {
-
+    
     /* DATI IN TEMPO REALE */
 
     .titolo-dati {
@@ -596,37 +588,45 @@ video::-webkit-media-controls-fullscreen-button {
     }
 }
 
-/* < 1800px */
+/* < 1300px */
 
-@media all and (max-width: 1800px) {
+@media all and (max-width: 1300px) {
 
-    /* Landing Page */
+    /* LANDING PAGE */
 
     .landing-page {
-        margin-left: 5em;
+        grid-template-columns: 20em 1fr 3fr;
     }
 
-    /* Streaming */
-    
+    .barriera-corallina {
+        filter: none;
+    }
+
+    .pesce {
+        display: none;
+    }
+
+    /* STREAMING */
+
     .pagina-stream {
-        grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: 1fr 5fr 1fr;
-        grid-column-gap: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .stream {
-        grid-area: 2 / 2 / 3 / 3;
+        order: 1;
     }
 
     .titolo-stream {
-        display: none;
+        order: 2;
     }
 
     .testo-stream {
-        display: none;
+        order: 3;
     }
 }
-
 
 /* Mobile */
 
@@ -635,126 +635,240 @@ video::-webkit-media-controls-fullscreen-button {
     /* HTML Class */
 
     navbar {
-        display: block;
         background-color: var(--nero);
-        padding: 1em 0;
+        padding: 0;
+        position: static;
     }
 
-    h1 {
-        font-size: 1.75em;
+    /* Navbar */
+
+    .tasti-navbar {
+        display: none;
+    }
+
+    .titolo {
+        text-align: center;
+    }
+    
+    /* Landing Page */
+
+    .landing-page {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2em;
         margin: 0;
     }
 
-    h2 {
-        font-size: 1.25em;
+    .barriera-corallina {
+        display: none;
     }
 
-    /* Prima Pagina */
-
-    .barra-progressiva-container {
-        display: block;
-        width: 100%;
-        height: 5px;
-        background-color: var(--nero);
-        position: fixed;
-        top: 0;
-        z-index: 1;
+    .titolo-vita-pesce {
+        grid-area: 2 / 2 / 3 / 3;
+        font-size: 2.5em;
+        margin: 0 auto;
+        white-space: nowrap;
     }
 
-    .barra-progressiva {
-        display: block;
-        height: 5px;
-        background-color: var(--bianco);
-        width: 0%;
+    .testo-vita-pesce {
+        grid-area: 3 / 2 / 4 / 3;
+        width: 80%;
+        margin: 2em auto;
     }
 
-    .pagina-principale {
-        display: block;
-        position: sticky;
-        top: 5px;
+    .tasto-acqua {
+        margin: 0 auto;
     }
 
-    .div-per-stream {
-        width: 100%;
+    .tasto-acqua .tasto-acqua-span {
+        top: 0px;
     }
 
-    .div-social {
-        position: fixed;
-        bottom: 20px;
-        right: 10px;
+    .acqua::after, .acqua::before {
+        content: none;
+        display: none;
     }
 
-    .div-link{
-        box-shadow: 0 10px 50px var(--ombra);
+    /* Streaming */
+
+    .pagina-stream {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr auto 100%;
+    }
+
+    .stream {
+        grid-area: 1 / 1 / 2 / 2;
     }
     
-    .div-link:hover .label-social {
-        display: none;
-        opacity: 1;
-        animation: social-fade-in 0.5s ease-in;
+    .titolo-stream {
+        grid-area: 2 / 1 / 3 / 2;
+        font-size: 2em;
+        margin: 1em auto;
+    }
+
+    .testo-stream {
+        grid-area: 3 / 1 / 4 / 2;
+        margin: 0 auto auto auto;
     }
 
     /* Dati in Tempo Reale */
 
-    .card {
-        margin: 2.5em;
-        padding: 1em;
-    }
-    
-    .div-dato {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-row-gap: 0;
+    .div-dati-in-tempo-reale {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .icona-dati, .label-dato-live, .dato-live {
+    .titolo-dati {
+        font-size: 2em;
+        margin: 0 auto;
+    }
+    
+    .card-dati-in-tempo-reale {
         margin: 0;
     }
 
+    .testo-dati {
+        margin: 1em auto 2em auto;
+    }
+
+    .card-dati-in-tempo-reale {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+        width: auto;
+        height: auto;
+    }
+
+    .div-dato {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .icona-dati {
-        grid-area: 1 / 1 / 2 / 2;
-        display: block;
-        margin: 0 auto;
+        margin: 0;
+        order: 1;
     }
 
-    .dato-live {
-        grid-area: 2 / 1 / 3 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-    }
-
-    .label-dato-live{
-        grid-area: 3 / 1 / 4 / 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap;
-        height: 25%;
+    .label-dato-live {
+        order: 3;
         color: var(--grigio-chiaro);
+        white-space: nowrap;
     }
-    
-    .barra-dato{
+
+    .barra-dato {
         display: none;
     }
 
-    .mappa {
-        height: 500px;
-        width: 500px;
+    .dato-live {
+        order: 2;
+        margin: 0;
+        font-size: 1.5em;
     }
+
+    /* Contatti */
+
+    .contatti {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 10em;
+    }
+
+    .titolo-contatti {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .card-sviluppatori {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        box-shadow: 0 20px 50px var(--ombra);
+        grid-column-gap: 1em;
+        width: 50%;
+    }
+
+    .immagine-profilo {
+        grid-area : 1 / 1 / 3 / 2;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nome {
+        grid-area: 1 / 2 / 2 / 3;
+        margin: auto auto 1em auto;
+        font-size: 1em;
+    }
+    
+    .sviluppatore {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .sviluppatore-social {
+        grid-area: 1 / 3 / 3 / 4;
+        flex-direction: column;
+        background-size: 100% 100%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+
+    .icona {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .link-sviluppatori {
+        padding: 0.75rem;
+    }
+
     /* Footer */
 
     .footer {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr 1.5fr 0.25fr 0.25fr;
     }
 
-    .info-footer {
-        margin: 2em;
+    .titolo-footer {
+        grid-area: 1 / 1 / 2 / 2;
+        margin: auto 0;
     }
     
+    .info-footer {
+        grid-area: 2 / 1 / 3 / 3;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .mappa {
+        grid-area: 3 / 1 / 4 / 2;
+        margin: auto auto;
+    }
+
+    .rule {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+
+    .copyright {
+        font-size: 0.75em;
+        grid-area: 5 / 1 / 6 / 2;
+        margin: 0;
+    }
+
 }
 
 /* Animation */

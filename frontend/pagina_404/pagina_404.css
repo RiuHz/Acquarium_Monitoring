@@ -1,0 +1,210 @@
+:root {
+    --verde-acqua: #56B6C2;
+    --blu: #4087ee;
+    --rosso: #E06C75;
+    --arancione: #D19A66;
+    --giallo: #E5C07B;
+    --verde: #98C379;
+
+    --bianco: #FDFCFA;
+    --grigio-chiaro: #ABB2BF;
+    --grigio-scuro: #1C1F25;
+    --nero: #0F0F0F;
+
+    --ombra: rgba(0, 0, 0, 0.8);
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(../fonts/open-sans.ttf);
+}
+
+@font-face {
+    font-family: Aquatico;
+    src: url(../fonts/Aquatico-Regular.otf);
+}
+
+
+* {
+    box-sizing: border-box;
+    color: var(--bianco );
+    font-family: open-sans;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--nero);
+    overflow: overlay;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    white-space: nowrap;
+}
+
+.titolo {
+    position: absolute;
+    top: 0.1em;
+    left: 3.5em;
+    font-family: Aquatico;
+    text-align: left;
+}
+
+.titolo-span {
+    font-family: Aquatico;
+    color: var(--blu);
+}
+
+.blu-span {
+    color: var(--blu);
+}
+
+.e404 {
+    font-family: Aquatico;
+    font-size: 15em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    background: url(../images/landing_page/barriera_corallina.jpg);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    user-select: none;
+    z-index: 1;
+    position: relative;
+}
+
+.div404 {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.pesce {
+    position: absolute;
+    bottom: -50%;
+    left: 18%;
+    z-index: 0;
+}
+
+.pagina-non-trovata {
+    margin: 0;
+    font-size: 4em;
+}
+
+.scuse {
+    color: var(--grigio-chiaro);
+}
+
+.tasto-acqua {
+    margin-top: 1em;
+    position: relative;
+    padding: 1em;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.tasto-acqua .tasto-acqua-span {
+    position: relative;
+    color: var(--bianco);
+    font-family: open-sans;
+    z-index: 1;
+}
+
+.tasto-acqua .acqua {
+    position: absolute;
+    top: -80px;
+    left: 0px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--blu);
+    transition: .5s;
+}
+
+.tasto-acqua .acqua::after, .tasto-acqua .acqua::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background-color: var(--grigio-scuro);
+}
+
+.tasto-acqua .acqua::before {
+    border-radius: 45%;
+    background-color: var(--grigio-scuro);
+    animation: animazione-acqua 5s linear infinite;
+}
+
+.tasto-acqua .acqua::after {
+    border-radius: 40%;
+    background-color: var(--grigio-scuro);
+    animation: animazione-acqua 10s linear infinite;
+}
+
+.tasto-acqua:hover .acqua {
+    top: -120px;
+}
+
+@media all and (max-width: 1000px) {
+
+    body {
+        height: 95vh;
+    }
+
+    .titolo {
+        top: 0.75em;
+        left: initial;
+        margin: 0;
+    }
+
+    .div404 {
+        padding-left: 1em;
+        margin: 0 auto;
+    }
+    
+    .e404 {
+        font-size: 9em;
+    }
+
+    .pesce {
+        display: none;
+    }
+
+    .pagina-non-trovata {
+        font-size: 2em;
+    }
+
+    .scuse {
+        white-space: pre-wrap;
+        text-align: center;
+    }
+
+    .acqua::after, .acqua::before {
+        content: none;
+        display: none;
+    }
+}
+
+@keyframes animazione-acqua {
+    to {
+        transform: translate(-50%, -75%) rotate(0deg);
+    } from {
+        transform: translate(-50%, -75%) rotate(360deg);
+        
+    }
+}
